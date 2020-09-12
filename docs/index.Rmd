@@ -13,7 +13,7 @@ output:
 
 * [Presentación](https://tuqmano.github.io/MetodosCiPol/Clase1/Clase1.html) 
 
-* [Instructivo para instalar software]() 
+* [Instructivo para instalar software](https://tuqmano.github.io/MetodosCiPol/Clase1/install_soft.html) 
 
 ---
 

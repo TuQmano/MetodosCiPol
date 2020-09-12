@@ -1,0 +1,30 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+subtitle: "RECURSOS"
+output: 
+ html_document:
+  css: "styles.css"
+---
+
+---
+
+#### 1. [Slack](https://slack.com/) - Espacio de trabajo
+
+#### 2. [Github](https://slack.com/) - Espacio de trabajo
+
+#### 3. [R](https://cran.r-project.org/) - _CRAN_
+
+#### 4. [RStudio](https://rstudio.com/products/rstudio/) _IDE_ (Integrated Development Environment)
+
+
+---
+
+#  #MétodosCiPol
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+
+

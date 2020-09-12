@@ -15,8 +15,22 @@ output:
 
 * [Instructivo para instalar software](https://tuqmano.github.io/MetodosCiPol/Clase1/install_soft.html) 
 
+
 ---
+
+####  #MétodosCiPol
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+---
+
+#### TuQmano
 
 ##### [`r icon::fa("globe")`](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/) 
 ##### [`r icon::fa("twitter")`](https://twitter.com/TuQmano)  [TuQmano](https://twitter.com/TuQmano) 
 ##### [`r icon::fa("github")`](https://github.com/tuqmano) [TuQmano](https://github.com/tuqmano)
+
+

@@ -48,4 +48,12 @@ GIT: [Happy Git and GitHub for the useR](https://happygitwithr.com/), Jenny Brya
 RMarkdown: [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/), Yihui Xie, J. J. Allaire, Garrett Grolemund.  
 
 
+#  #MétodosCiPol
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+
 

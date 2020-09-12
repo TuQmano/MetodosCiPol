@@ -8,6 +8,9 @@ output:
 
 ---
 
+### INSTALAR
+
+
 #### 1. [Slack](https://slack.com/) - Espacio de trabajo
 
 #### 2. [Github](https://slack.com/) - Control de versiones + DEV 
@@ -15,6 +18,26 @@ output:
 #### 3. [R](https://cran.r-project.org/) - _CRAN_ (The Comprehensive R Archive Network)
 
 #### 4. [RStudio](https://rstudio.com/products/rstudio/) _IDE_ (Integrated Development Environment)
+
+
+---
+
+### CONSULTA
+
+####  [R-bloggers](https://www.r-bloggers.com//) | [Stackoverflow](https://stackoverflow.com/tags/r/) | [RStudio Community](https://community.rstudio.com/) - Foros
+
+####  [R Studio Cheatsheets](https://rstudio.com/resources/cheatsheets/) - _Machetes_
+
+
+---
+
+### EXTRAS
+
+####  [Overleaf](https://www.overleaf.com/) - _LaTeX_ online 
+
+####  [Markdown](https://packetlife.net/media/library/16/Markdown.pdf) | [RMarkdown](https://rmarkdown.rstudio.com/)
+
+#### [{DATOS}](https://cienciadedatos.github.io/datos/) y [#DatosDeMiercoles](https://github.com/cienciadedatos/datos-de-miercoles)
 
 
 ---

@@ -9,11 +9,17 @@ output:
 
 ---
 
-#### CLASE 1 
+### MATERIAL
 
-* [Presentación](https://tuqmano.github.io/MetodosCiPol/Clase1/Clase1.html) 
+##### -> [BIBLIOGRAFÍA](https://tuqmano.github.io/MetodosCiPol/bibliografia.html)
 
-* [Instructivo para instalar software](https://tuqmano.github.io/MetodosCiPol/Clase1/install_soft.html) 
+---
+
+### CLASE 1 
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase1/Clase1.html) 
+
+* [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase1/install_soft.html) 
 
 
 ---

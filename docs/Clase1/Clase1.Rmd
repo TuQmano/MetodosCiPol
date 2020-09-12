@@ -533,15 +533,15 @@ class: inverse, center. middle
 
 # Curso
 
-* La bibliografía está disponible en el campus virtual. 
+* La bibliografía está disponible [acá](https://tuqmano.github.io/MetodosCiPol/bibliografia.html). 
 
 --
 
-* Los `scripts` con código, _handouts_ y material extra estarán colgados luego de cada clase en un repositorio compartido en Dropbox con una carpeta correspondiente a cada sesión. 
+* Los `scripts` con código, _handouts_ y otra material extra se [compartirá acá](https://tuqmano.github.io/MetodosCiPol/) luego de cada sesión. 
 
 --
 
-* Compartiré el código en vivo para que puedan tener acceso desde un navegador de internet. 
+* Se compartirá el **código en vivo** para que puedan tener acceso desde un navegador de internet. 
 
 --
 
@@ -549,4 +549,4 @@ class: inverse, center. middle
 
 --
 
-* A lo largo del curso deberán entregar algun(os) TP(s) intermedios (sesiones 5 y 9).
+* A lo largo del curso deberán completar ejercicios de práctica.

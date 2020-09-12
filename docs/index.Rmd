@@ -5,7 +5,7 @@ output:
   css: "styles.css"
 ---
 
-#### [CP44] Maestría en Ciencia Política | UNIVERSIDAD TORCUATO DI TELLA
+#### [CP44] Maestría en Ciencia Política | UNIVERSIDAD TORCUATO DI TELLA | Sep - Nov 2020
 
 ---
 

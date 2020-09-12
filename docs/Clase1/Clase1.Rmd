@@ -1,8 +1,8 @@
 ---
 title: "Herramientas Cuantitativas para el Análisis Político"
 subtitle: "[CP44] Maestría en Ciencia Política"
-author: "Universidad Torcuato Di Tella"
-institute: "INTRODUCCION"
+author: "Juan Pablo Ruiz Nicolini"
+institute: "Universidad Torcuato Di Tella"
 date: "15/09/2020"
 output:
   xaringan::moon_reader:
@@ -54,6 +54,20 @@ style_mono_accent(
 
 ```
 
+
+---
+
+class: middle, center
+
+
+## INTRODUCCION - Sesión 1
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+
 ---
 class: center, middle
 
@@ -68,7 +82,7 @@ class: center, middle
 
 #### Áreas: 
 
-#### **estudios electorales | reforma política  | métodos cuantitativos**
+#### estudios electorales | reforma política  | métodos cuantitativos
 
 ---
 

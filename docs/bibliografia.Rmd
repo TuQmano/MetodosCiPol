@@ -2,13 +2,17 @@
 title: "Herramientas Cuantitativas para el Análisis Político"
 subtitle: "BIBLIOGRAFÍA"
 output: 
+# pdf_document: default
  html_document:
   css: "styles.css"
 ---
 
 #### [CP44] Maestría en Ciencia Política | UNIVERSIDAD TORCUATO DI TELLA | Sep - Nov 2020
 
+**([Descargar Bibliografía](bibliografia.pdf))**
+
 ---
+
 
 #### PRINCIPAL
 

@@ -1,6 +1,7 @@
 ---
 title: "Herramientas Cuantitativas para el Análisis Político"
 output: 
+ #pdf_document: default
  html_document:
   css: "styles.css"
 ---
@@ -9,7 +10,10 @@ output:
 
 ---
 
-# PROGRAMA
+# PROGRAMA 
+**([Descargar](programa.pdf))**
+
+---
 
 **Sesión 1**: Presentación
 

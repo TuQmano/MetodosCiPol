@@ -97,4 +97,11 @@ Descargar datos de la web: ejemplos aplicados con la API de _Twitter_ vía `rtwe
 
 **Sesión 11**: Definición de proyecto final
 
+---
+
+#  #MétodosCiPol
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
 

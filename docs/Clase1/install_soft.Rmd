@@ -8,7 +8,7 @@ output:
 
 ---
 
-### INSTALAR
+### Instalar
 
 
 #### 1. [Slack](https://slack.com/) - Espacio de trabajo
@@ -22,7 +22,7 @@ output:
 
 ---
 
-### CONSULTA
+### Consulta
 
 ####  [R-bloggers](https://www.r-bloggers.com//) | [Stackoverflow](https://stackoverflow.com/tags/r/) | [RStudio Community](https://community.rstudio.com/) - Foros
 
@@ -31,13 +31,11 @@ output:
 
 ---
 
-### EXTRAS
+### Extras
 
 ####  [Overleaf](https://www.overleaf.com/) - _LaTeX_ online 
 
 ####  [Markdown](https://packetlife.net/media/library/16/Markdown.pdf) | [RMarkdown](https://rmarkdown.rstudio.com/)
-
-#### [{DATOS}](https://cienciadedatos.github.io/datos/) y [#DatosDeMiercoles](https://github.com/cienciadedatos/datos-de-miercoles)
 
 
 ---

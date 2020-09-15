@@ -11,7 +11,7 @@ output:
 
 # DATOS 
 
-### Elecciones, votacion y Discursos
+### Elecciones, Votaciones Legislativas y Discursos Presidenciales
 
 [{polAr}](https://electorarg.github.io/polAr/): Política Argentina usando `R`. 
 
@@ -27,6 +27,10 @@ output:
 ### DD.HH.
 
 [{presentes}](https://diegokoz.github.io/presentes/index.html):  poner a disposición la información oficial sobre víctimas del terrorismo de estado en Argentina. 
+
+### GEO 
+
+[{geofaceteAR}](https://electorarg.github.io/geofaceteAR/):  Códigos geográficos de Argentina y grillas para visulaización de datos _como si fueran mapas_ (una versión ampliada del trabajo con información geográfica fue incorporada recientemente en {polAr}).  
 
 ### R para Ciencia de Datos - Comunidad Ñ 
 

@@ -17,9 +17,13 @@ output:
 
 **Sesión 2**: Introducción 
 
-* Conociendo R + RStudio
+Conociendo R + RStudio
 
 * R base y el suite _Tidyverse_
+
+* Organizar el trabajo (.Rproj, `here` y git)
+
+* Reproducibilidad y Comunicación (.R y Rmd)
 
 ---
 
@@ -27,9 +31,9 @@ output:
 
 Los principales paquetes y sus verbos para: 
 
-1. leer datos (`readr`, `heaven`)
+1. leer datos (`readr`, `heaven`, `readxl`, `googlesheets4`, [etc](https://www.tidyverse.org/packages/#import))
 
-2. limpiar datos (`tidyr`, `janitor`)
+2. limpiar datos (`tidyr`, `janitor`, `tibble`)
 
 3. transformar datos (`dplyr`)
 
@@ -49,9 +53,13 @@ Ampliando la caja de herramientas:
 
 **Sesión 5**: Programación (intro)
 
-* Funciones para no repetirse uno mismo
+Funciones para no repetirse uno mismo
+
+* La pipa de `magrittr` (`%>%`)
 
 * Introducción a `purrr` (programación funcional)
+
+* `glue`para facilitar la concatenación
 
 ---
 
@@ -67,7 +75,7 @@ Ampliando la caja de herramientas:
 
 * Las muchas capas de `ggplot2` 
 
-* Extensiones
+* Extensiones: `patchwork`, `ggforce`, `ggparliament`, entre otros. 
 
 ---
 
@@ -85,23 +93,33 @@ Distintas formas de representar información geográfica:
 
 **Sesión 9**: Tópicos I
 
-Análisis Cuantitativo de Texto: una primera aproximación a `tidytext`y `tm`
+Descargar datos de la web: ejemplos aplicados con la API de _Twitter_ vía `rtweet` y scraping con `rvest`
 
 ---
 
 **Sesión 10**: Tópicos II
 
-Descargar datos de la web: ejemplos aplicados con la API de _Twitter_ vía `rtweet` y scraping con `rvest`
+
+Análisis Cuantitativo de Texto: una primera aproximación a `tidytext`, `tm` , `topicmodels` y otros. 
 
 ---
 
-**Sesión 11**: Definición de proyecto final
+**Sesión 11**: Tópicos III
+
+* Herramientas de Comunicación
+
+* Definiciones del trabajo final
 
 ---
+
 
 #  #MétodosCiPol
 
+
 #### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
 
+
 #### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
 

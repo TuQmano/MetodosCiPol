@@ -46,7 +46,7 @@ exclude: true
 class: middle, center
 
 
-## INTRODUCCION - Sesión 1
+## SESIÓN 1: Introducción 
 
 #### [<i class="fas  fa-globe "></i>/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
 
@@ -419,7 +419,8 @@ show_arg_codes(viewer = F)  # level = "departamento disponible
 ```r
 *get_geo(geo =  "TUCUMAN") %&gt;%
   ggplot2::ggplot() +
-  ggplot2::geom_sf()
+  ggplot2::geom_sf() +
+  ggplot2::geom_sf_label(aes(label = coddepto))
 ```
 ]
 
@@ -530,7 +531,7 @@ get_election_data(district = "caba", category = "dip",
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#frqxkgcxwm .gt_table {
+#ugqjorsjod .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -555,7 +556,7 @@ get_election_data(district = "caba", category = "dip",
   border-left-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_heading {
+#ugqjorsjod .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -567,7 +568,7 @@ get_election_data(district = "caba", category = "dip",
   border-right-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_title {
+#ugqjorsjod .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -577,7 +578,7 @@ get_election_data(district = "caba", category = "dip",
   border-bottom-width: 0;
 }
 
-#frqxkgcxwm .gt_subtitle {
+#ugqjorsjod .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -587,13 +588,13 @@ get_election_data(district = "caba", category = "dip",
   border-top-width: 0;
 }
 
-#frqxkgcxwm .gt_bottom_border {
+#ugqjorsjod .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_col_headings {
+#ugqjorsjod .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -608,7 +609,7 @@ get_election_data(district = "caba", category = "dip",
   border-right-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_col_heading {
+#ugqjorsjod .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -628,7 +629,7 @@ get_election_data(district = "caba", category = "dip",
   overflow-x: hidden;
 }
 
-#frqxkgcxwm .gt_column_spanner_outer {
+#ugqjorsjod .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -640,15 +641,15 @@ get_election_data(district = "caba", category = "dip",
   padding-right: 4px;
 }
 
-#frqxkgcxwm .gt_column_spanner_outer:first-child {
+#ugqjorsjod .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#frqxkgcxwm .gt_column_spanner_outer:last-child {
+#ugqjorsjod .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#frqxkgcxwm .gt_column_spanner {
+#ugqjorsjod .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -660,7 +661,7 @@ get_election_data(district = "caba", category = "dip",
   width: 100%;
 }
 
-#frqxkgcxwm .gt_group_heading {
+#ugqjorsjod .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -682,7 +683,7 @@ get_election_data(district = "caba", category = "dip",
   vertical-align: middle;
 }
 
-#frqxkgcxwm .gt_empty_group_heading {
+#ugqjorsjod .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -697,15 +698,15 @@ get_election_data(district = "caba", category = "dip",
   vertical-align: middle;
 }
 
-#frqxkgcxwm .gt_from_md > :first-child {
+#ugqjorsjod .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#frqxkgcxwm .gt_from_md > :last-child {
+#ugqjorsjod .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#frqxkgcxwm .gt_row {
+#ugqjorsjod .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -724,7 +725,7 @@ get_election_data(district = "caba", category = "dip",
   overflow-x: hidden;
 }
 
-#frqxkgcxwm .gt_stub {
+#ugqjorsjod .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -736,7 +737,7 @@ get_election_data(district = "caba", category = "dip",
   padding-left: 12px;
 }
 
-#frqxkgcxwm .gt_summary_row {
+#ugqjorsjod .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -746,7 +747,7 @@ get_election_data(district = "caba", category = "dip",
   padding-right: 5px;
 }
 
-#frqxkgcxwm .gt_first_summary_row {
+#ugqjorsjod .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -756,7 +757,7 @@ get_election_data(district = "caba", category = "dip",
   border-top-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_grand_summary_row {
+#ugqjorsjod .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -766,7 +767,7 @@ get_election_data(district = "caba", category = "dip",
   padding-right: 5px;
 }
 
-#frqxkgcxwm .gt_first_grand_summary_row {
+#ugqjorsjod .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -776,11 +777,11 @@ get_election_data(district = "caba", category = "dip",
   border-top-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_striped {
+#ugqjorsjod .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#frqxkgcxwm .gt_table_body {
+#ugqjorsjod .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -789,7 +790,7 @@ get_election_data(district = "caba", category = "dip",
   border-bottom-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_footnotes {
+#ugqjorsjod .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -803,13 +804,13 @@ get_election_data(district = "caba", category = "dip",
   border-right-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_footnote {
+#ugqjorsjod .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#frqxkgcxwm .gt_sourcenotes {
+#ugqjorsjod .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -823,46 +824,46 @@ get_election_data(district = "caba", category = "dip",
   border-right-color: #D3D3D3;
 }
 
-#frqxkgcxwm .gt_sourcenote {
+#ugqjorsjod .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#frqxkgcxwm .gt_left {
+#ugqjorsjod .gt_left {
   text-align: left;
 }
 
-#frqxkgcxwm .gt_center {
+#ugqjorsjod .gt_center {
   text-align: center;
 }
 
-#frqxkgcxwm .gt_right {
+#ugqjorsjod .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#frqxkgcxwm .gt_font_normal {
+#ugqjorsjod .gt_font_normal {
   font-weight: normal;
 }
 
-#frqxkgcxwm .gt_font_bold {
+#ugqjorsjod .gt_font_bold {
   font-weight: bold;
 }
 
-#frqxkgcxwm .gt_font_italic {
+#ugqjorsjod .gt_font_italic {
   font-style: italic;
 }
 
-#frqxkgcxwm .gt_super {
+#ugqjorsjod .gt_super {
   font-size: 65%;
 }
 
-#frqxkgcxwm .gt_footnote_marks {
+#ugqjorsjod .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="frqxkgcxwm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="ugqjorsjod" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="2" class="gt_heading gt_title gt_font_normal" style>CABA - 2019</th>
@@ -972,6 +973,15 @@ class: inverse, center. middle
 
 # Historia de R
 
+
+&gt; Más que lenguaje de programación R **_"es un dialecto de un lenguage de programación de los 70s"_** (S - Bell Laboratories: AT&amp;T, Nokia...)&lt;sup&gt;1&lt;/sup&gt;
+
+.footnote[
+[1] La cita y este repaso se basan en _slides_ de  [Germán Rosati](https://github.com/gefero/fund-prog-r/)
+]
+
+--
+
 * Creado por **R**oss Ithaka y **R**obert Gentelman (1991 a 1993)
 
 `S -&gt; R`
@@ -987,14 +997,6 @@ class: inverse, center. middle
 --
 
 * 2020: 4.0V
-
---
-
-&gt; Más que lenguaje de programación R **_"es un dialecto de un lenguage de programación de los 70s"_** (S - Bell Laboratories: AT&amp;T, Nokia...)&lt;sup&gt;1&lt;/sup&gt;
-
-.footnote[
-[1] La cita y este repaso se basan en _slides_ de  [Germán Rosati](https://github.com/gefero/fund-prog-r/)
-]
 
 ---
 

@@ -60,7 +60,7 @@ style_mono_accent(
 class: middle, center
 
 
-## INTRODUCCION - Sesión 1
+## SESIÓN 1: Introducción 
 
 #### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
 
@@ -360,19 +360,21 @@ get_grid(district = "TUCUMAN") %>%
 
 .pull-left[
 
-```{r geo , eval = F}
+```{r geo , eval = F, warning=FALSE}
 get_geo(geo =  "TUCUMAN") %>%  #<<
   ggplot2::ggplot() +
-  ggplot2::geom_sf()
+  ggplot2::geom_sf() +
+  ggplot2::geom_sf_label(aes(label = coddepto))
 ```
 ]
 
 .pull-right[
 
-```{r geo plot, echo = F}
-get_geo(geo =  "TUCUMAN") %>% 
+```{r geo plot, echo = F, warning=FALSE}
+get_geo(geo =  "TUCUMAN") %>%  #<<
   ggplot2::ggplot() +
-  ggplot2::geom_sf(aes (label = coddepto))
+  ggplot2::geom_sf() +
+  ggplot2::geom_sf_label(aes(label = coddepto))
 
 ```
 ]
@@ -490,6 +492,15 @@ class: inverse, center. middle
 
 # Historia de R
 
+
+> Más que lenguaje de programación R **_"es un dialecto de un lenguage de programación de los 70s"_** (S - Bell Laboratories: AT&T, Nokia...)<sup>1</sup>
+
+.footnote[
+[1] La cita y este repaso se basan en _slides_ de  [Germán Rosati](https://github.com/gefero/fund-prog-r/)
+]
+
+--
+
 * Creado por **R**oss Ithaka y **R**obert Gentelman (1991 a 1993)
 
 `S -> R`
@@ -505,14 +516,6 @@ class: inverse, center. middle
 --
 
 * 2020: 4.0V
-
---
-
-> Más que lenguaje de programación R **_"es un dialecto de un lenguage de programación de los 70s"_** (S - Bell Laboratories: AT&T, Nokia...)<sup>1</sup>
-
-.footnote[
-[1] La cita y este repaso se basan en _slides_ de  [Germán Rosati](https://github.com/gefero/fund-prog-r/)
-]
 
 ---
 

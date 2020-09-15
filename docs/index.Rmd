@@ -13,6 +13,8 @@ output:
 
 ##### -> [BIBLIOGRAFÍA](https://tuqmano.github.io/MetodosCiPol/bibliografia.html)
 
+##### -> [PROGRAMA](https://tuqmano.github.io/MetodosCiPol/programa.html)
+
 ---
 
 ### CLASE 1 

@@ -1,0 +1,51 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+subtitle: "RECURSOS"
+output: 
+ html_document:
+  css: "styles.css"
+---
+
+---
+
+### Instalar
+
+
+#### 1. [Slack](https://slack.com/) - Espacio de trabajo
+
+#### 2. [Github](https://slack.com/) - Control de versiones + DEV 
+
+#### 3. [R](https://cran.r-project.org/) - _CRAN_ (The Comprehensive R Archive Network)
+
+#### 4. [RStudio](https://rstudio.com/products/rstudio/) _IDE_ (Integrated Development Environment)
+
+
+---
+
+### Consulta
+
+####  [R-bloggers](https://www.r-bloggers.com//) | [Stackoverflow](https://stackoverflow.com/tags/r/) | [RStudio Community](https://community.rstudio.com/) - Foros
+
+####  [R Studio Cheatsheets](https://rstudio.com/resources/cheatsheets/) - _Machetes_
+
+
+---
+
+### Extras
+
+####  [Overleaf](https://www.overleaf.com/) - _LaTeX_ online 
+
+####  [Markdown](https://packetlife.net/media/library/16/Markdown.pdf) | [RMarkdown](https://rmarkdown.rstudio.com/)
+
+
+---
+
+#  #MétodosCiPol
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+
+

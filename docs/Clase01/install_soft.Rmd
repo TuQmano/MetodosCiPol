@@ -13,7 +13,7 @@ output:
 
 #### 1. [Slack](https://slack.com/) - Espacio de trabajo
 
-#### 2. [Github](https://slack.com/) - Control de versiones + DEV 
+#### 2. [Github](https://github.com) - Control de versiones + DEV 
 
 #### 3. [R](https://cran.r-project.org/) - _CRAN_ (The Comprehensive R Archive Network)
 

@@ -21,10 +21,16 @@ output:
 
 ### CLASE 1 
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase1/Clase1.html) 
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase01/Clase1.html) 
 
 * [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase1/install_soft.html) 
 
+
+### CLASE 2
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase02/Clase2.html) 
+
+* [RStudio IDE](https://github.com/rstudio/cheatsheets/blob/master/translations/spanish/rstudio-ide_Spanish_Translation_Monica_Alonso.pdf) <- Machete 
 
 ---
 

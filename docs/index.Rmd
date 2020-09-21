@@ -23,7 +23,7 @@ output:
 
 * [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase01/Clase1.html) 
 
-* [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase1/install_soft.html) 
+* [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase01/install_soft.html) 
 
 
 ---

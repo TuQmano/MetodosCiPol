@@ -338,3 +338,15 @@ summary(curso$edad) # Conjunto de medidas de dispoersión
 
 boxplot(curso$edad) # Grafico de cajas
 
+
+
+#######                               #######
+#######            R BASE             #######  
+#######              VS               #######
+#######            Tidyverse          #######   
+           
+#######          (voler a Slides)     #######
+#######  https://tuqmano.github.io/MetodosCiPol/Clase02/Clase2.html                               #######   
+
+
+

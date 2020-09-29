@@ -6,11 +6,7 @@ output:
  github_document: default
 ---
 
-```{r global_opts, echo=FALSE}
 
- knitr::opts_chunk$set(cache = TRUE)
-
-```
 
 
 
@@ -49,17 +45,17 @@ output:
 
 ####  #MétodosCiPol
 
-#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+#### [<!--html_preserve--><i class="fas  fa-globe "></i><!--/html_preserve-->/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
 
-#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+#### [<!--html_preserve--><i class="fab  fa-github "></i><!--/html_preserve-->/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
 
 
 ---
 
 #### TuQmano
 
-##### [`r icon::fa("globe")`](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/) 
-##### [`r icon::fa("twitter")`](https://twitter.com/TuQmano)  [TuQmano](https://twitter.com/TuQmano) 
-##### [`r icon::fa("github")`](https://github.com/tuqmano) [TuQmano](https://github.com/tuqmano)
+##### [<!--html_preserve--><i class="fas  fa-globe "></i><!--/html_preserve-->](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/) 
+##### [<!--html_preserve--><i class="fab  fa-twitter "></i><!--/html_preserve-->](https://twitter.com/TuQmano)  [TuQmano](https://twitter.com/TuQmano) 
+##### [<!--html_preserve--><i class="fab  fa-github "></i><!--/html_preserve-->](https://github.com/tuqmano) [TuQmano](https://github.com/tuqmano)
 
 

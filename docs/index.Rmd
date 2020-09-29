@@ -44,6 +44,16 @@ output:
 
 * [R Markdown](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)  
 
+### CLASE 3
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase03/Clase3.html) 
+
+#### Machetes 
+
+* [Importar Datos](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/data-import-Spanish_translation-2019.pdf)  
+
+* [Transformar Datos](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/data-transformation_Spanish.pdf)  
+
 ---
 
 ####  #MétodosCiPol

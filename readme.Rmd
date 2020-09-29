@@ -1,0 +1,65 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+output: 
+ html_document: 
+  keep_md: true
+ github_document: default
+---
+
+```{r global_opts, echo=FALSE}
+
+ knitr::opts_chunk$set(cache = TRUE)
+
+```
+
+
+
+#### [CP44] Maestría en Ciencia Política | UNIVERSIDAD TORCUATO DI TELLA | Sep - Nov 2020
+
+---
+
+### MATERIAL
+
+##### -> [BIBLIOGRAFÍA](https://tuqmano.github.io/MetodosCiPol/bibliografia.html)
+
+##### -> [PROGRAMA](https://tuqmano.github.io/MetodosCiPol/programa.html)
+
+##### -> [DATOS](https://tuqmano.github.io/MetodosCiPol/datos.html)
+
+---
+
+### CLASE 1 
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase01/Clase1.html) 
+
+* [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase01/install_soft.html) 
+
+
+### CLASE 2
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase02/Clase2.html) 
+
+#### Machetes 
+
+* [RStudio IDE](https://github.com/rstudio/cheatsheets/blob/master/translations/spanish/rstudio-ide_Spanish_Translation_Monica_Alonso.pdf)  
+
+* [R Markdown](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)  
+
+---
+
+####  #MétodosCiPol
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+---
+
+#### TuQmano
+
+##### [`r icon::fa("globe")`](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/) 
+##### [`r icon::fa("twitter")`](https://twitter.com/TuQmano)  [TuQmano](https://twitter.com/TuQmano) 
+##### [`r icon::fa("github")`](https://github.com/tuqmano) [TuQmano](https://github.com/tuqmano)
+
+

@@ -133,7 +133,9 @@ background-image: url(https://github.com/TuQmano/hex-stickers/raw/master/PNG/tid
 background-position: 95% 5%
 background-size: 10%
 
-# Datos Ordenados
+# Domar los datos I
+
+## Datos Ordenados
 
 
 ```{r tidy_data, echo = F, out.width='80%'}
@@ -161,7 +163,9 @@ background-image: url(https://github.com/TuQmano/hex-stickers/raw/master/PNG/tid
 background-position: 95% 5%
 background-size: 10%
 
-# Datos Ordenados: _pivotear_
+# Domar los datos I
+
+## Datos Ordenados: _pivotear_
 
 Entre los distintos verbos, se destacan: 
 
@@ -185,6 +189,7 @@ background-image: url(https://github.com/TuQmano/hex-stickers/raw/master/PNG/dpl
 background-position: 95% 5%
 background-size: 10%
 
+# Domar los datos I
 
 ## Transformar
 
@@ -239,11 +244,6 @@ class: inverse, center, middle
 # TP N°1
 
 
----
-class: inverse, middle, center
-
-# Domar los Datos
-### (II Parte) 
 
 ---
 
@@ -251,7 +251,7 @@ background-image: url(https://www.tidyverse.org/blog/2020/06/dplyr-1-0-0/dplyr.p
 background-position: 95% 5%
 background-size: 10%
 
-# Domar los datos II
+# Domar los datos I
 
 ## + verbos de `{dplyr}`
 
@@ -291,8 +291,6 @@ background-position: 95% 5%
 background-size: 10%
 
 
-# Domar los datos II
-
 ## Datos relacionales 
 
 
@@ -308,6 +306,32 @@ knitr::include_graphics("https://www.garrickadenbuie.com/project/tidyexplain/ima
 
 ---
 
+background-image: url(https://www.tidyverse.org/blog/2020/06/dplyr-1-0-0/dplyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+## Datos relacionales 
+
+* Uniones de transformación (del inglés _mutating joins_), que agregan nuevas variables a un data frame a partir de las observaciones coincidentes en otra tabla (*vg* `left_join()`)
+
+* Uniones de filtro (del inglés _filtering joins_), que filtran observaciones en un _data frame_ con base en si coinciden o no con una observación de otra tabla (*vg* `anti_join()`).
+
+* Operaciones de conjuntos (del inglés _set operations_), que tratan las observaciones como elementos de un conjunto (*vg* `set_diff()`).
+
+
+`r icon::fa("link")` [Datos Relacionales - R4DS](https://es.r4ds.hadley.nz/datos-relacionales.html)
+
+
+---
+class: inverse, middle, center
+
+# Domar los Datos
+### (II Parte) 
+
+---
+
+
 background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/stringr.png)
 background-position: 95% 5%
 background-size: 10%
@@ -316,16 +340,18 @@ background-size: 10%
 
 ## Caracteres 
 
-* Funciones que permiten manipular caracteres individuales dentro de las cadenas en vectores de caracteres (_vg_ : **`str_sub(string = DF, start = 1, end = 4)`**.
+--
+
+* Funciones que permiten manipular caracteres individuales dentro de las cadenas en vectores de caracteres (_vg_ : **`str_sub(string = x, start = 1, end = 4)`**).
 
 --
 
-* Herramientas para agregar, eliminar y manipular espacios en blanco (_vg_ : **`str_pad(string = DF , width = 2 , side = "left" , pad = 0)`**.
+* Herramientas para agregar, eliminar y manipular espacios en blanco (_vg_ : **`str_pad(string = x , width = 2 , side = "left" , pad = 0)`**).
 
 --
 
 * Funciones que detectan coincidencia de patrones como  las _expresiones regulares_ -[_regex_ `r icon::fa("link")`](https://stringr.tidyverse.org/articles/regular-expressions.html): 
-**`str_detect(string = DF, pattern = ":digits:")`**
+**`str_detect(string = x, pattern = ":digits:")`**
 
 
 --
@@ -381,7 +407,7 @@ background-size: 10%
 ## Variables categóricas
 
 
-> Los factores son útiles cuando se tiene datos categóricos, variables que tienen un conjunto de valores fijo y conocido, y cuando se desea mostrar los vectores de caracteres en orden no alfabético **R4DS - <https://es.r4ds.hadley.nz/factores.html>**
+> *Los factores son útiles cuando se tiene datos categóricos, variables que tienen un conjunto de valores fijo y conocido, y cuando se desea mostrar los vectores de caracteres en orden no alfabético* **R4DS - <https://es.r4ds.hadley.nz/factores.html>**
 
 --
 

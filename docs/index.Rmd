@@ -68,6 +68,17 @@ output:
 
 * [Datos de Texto (_Character_)](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/strings_Spanish.pdf) con `{stringr}`
 
+
+### CLASE 5
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase05/Clase5.html)
+
+#### Machetes 
+
+* [Iteraciones - programación funcional](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/purrr_COrtega_Spanish.pdf) con `{purrr}`
+
+
+
 ---
 
 ###  #MétodosCiPol

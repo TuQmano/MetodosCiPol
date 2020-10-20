@@ -78,6 +78,15 @@ output:
 * [Iteraciones - programación funcional](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/purrr_COrtega_Spanish.pdf) con `{purrr}`
 
 
+### CLASE 6
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase06/Clase6.html)
+
+#### Machetes 
+
+* [Dava Viz](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/ggplot2.pdf) con `{ggplot2}`
+
+
 
 ---
 

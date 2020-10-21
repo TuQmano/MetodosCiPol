@@ -1,9 +1,6 @@
 ---
-title: "Herramientas Cuantitativas para el Análisis Político"
-output: 
- html_document: 
-  keep_md: true
- github_document: default
+output: github_document
+always_allow_html: true
 ---
 
 ```{r global_opts, echo=FALSE}
@@ -13,6 +10,7 @@ output:
 ```
 
 
+## Herramientas Cuantitativas para el Análisis Político
 
 #### [CP44] Maestría en Ciencia Política | UNIVERSIDAD TORCUATO DI TELLA | Sep - Nov 2020
 

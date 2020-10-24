@@ -76,6 +76,28 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 
 -----
 
+### CLASE 5
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase05/Clase5.html)
+
+#### Machetes
+
+  - [Iteraciones - programación
+    funcional](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/purrr_COrtega_Spanish.pdf)
+    con `{purrr}`
+
+### CLASE 6
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase06/Clase6.html)
+
+#### Machetes
+
+  - [Dava
+    Viz](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/ggplot2.pdf)
+    con `{ggplot2}`
+
+-----
+
 ### \#MétodosCiPol
 
 #### [<!--html_preserve--><i class="fas  fa-globe "></i><!--/html_preserve-->/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)

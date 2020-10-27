@@ -89,7 +89,9 @@ output:
 
 * [Dava Viz](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/ggplot2.pdf) con `{ggplot2}`
 
+### CLASE 7
 
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase07/Clase7.html)
 
 ---
 

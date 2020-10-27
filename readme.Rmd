@@ -71,8 +71,6 @@ always_allow_html: true
 
 * [Datos de Texto (_Character_)](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/strings_Spanish.pdf) con `{stringr}`
 
----
-
 
 ### CLASE 5
 
@@ -82,7 +80,6 @@ always_allow_html: true
 
 * [Iteraciones - programación funcional](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/purrr_COrtega_Spanish.pdf) con `{purrr}`
 
-
 ### CLASE 6
 
 * [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase06/Clase6.html)
@@ -91,6 +88,10 @@ always_allow_html: true
 
 * [Dava Viz](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/ggplot2.pdf) con `{ggplot2}`
 
+### CLASE 7
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase07/Clase7.html)
+
 ---
 
 ###  #MétodosCiPol
@@ -98,9 +99,6 @@ always_allow_html: true
 #### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
 
 #### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
-
-
-
 
 
 ### TuQmano

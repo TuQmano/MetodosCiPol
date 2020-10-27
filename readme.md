@@ -74,8 +74,6 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
     (*Character*)](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/strings_Spanish.pdf)
     con `{stringr}`
 
------
-
 ### CLASE 5
 
   - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase05/Clase5.html)
@@ -95,6 +93,10 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
   - [Dava
     Viz](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/ggplot2.pdf)
     con `{ggplot2}`
+
+### CLASE 7
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase07/Clase7.html)
 
 -----
 

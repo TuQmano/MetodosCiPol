@@ -98,6 +98,16 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 
   - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase07/Clase7.html)
 
+### CLASE 8
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase08/Clase8.html)
+
+#### Machetes
+
+  - [Datos Espaciales
+    Simplificados](https://github.com/rstudio/cheatsheets/raw/master/sf.pdf)
+    con `{sf}`
+
 -----
 
 ### \#MétodosCiPol

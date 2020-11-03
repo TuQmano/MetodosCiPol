@@ -72,6 +72,16 @@ class:  center, middle
 
 * [*Geocomputation with R*, Robin Lovelace, Jakub Nowosad, Jannes Muenchow (2019)](Robin Lovelace, Jakub Nowosad, Jannes Muenchow)
 
+---
+
+## #Election2020 
+
+> **"_Trump loves this 2016 election map because it suggests the majority of the country supports him (...)_"** **([NYT](https://www.nytimes.com/interactive/2020/10/30/opinion/election-results-maps.html))**
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figs/nyt.PNG")
+```
+
 
 
 

@@ -101,6 +101,14 @@ always_allow_html: true
 
 * [Datos Espaciales Simplificados](https://github.com/rstudio/cheatsheets/raw/master/sf.pdf) con `{sf}`
 
+
+### CLASE 9
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase09/Clase9.html)
+
+
+
+
 ---
 
 ###  #MétodosCiPol

@@ -32,6 +32,10 @@ output:
 
 [{geofaceteAR}](https://electorarg.github.io/geofaceteAR/):  Códigos geográficos de Argentina y grillas para visulaización de datos _como si fueran mapas_ (una versión ampliada del trabajo con información geográfica fue incorporada recientemente en {polAr}).  
 
+[{gegorefar}](https://github.com/pdelboca/georefar):  paquete de R que implementa un wrapper para la API georef-ar. La API del Servicio de Normalización de Datos Geográficos, permite normalizar y codificar los nombres de unidades territoriales de la Argentina (provincias, departamentos, municipios y localidades) y de sus calles, así como ubicar coordenadas dentro de ellas.  
+
+[{RUMBA}](https://github.com/bitsandbricks/RUMBA):  Un conjunto de herramientas para analizar la Región Urbana Metropolitana de Buenos Aires usando R.  
+
 ### R para Ciencia de Datos - Comunidad Ñ 
 
 [{DATOS}](https://cienciadedatos.github.io/datos/): provee la traducción al español de conjuntos de datos en inglés originalmente disponibles en otros paquetes de R. 

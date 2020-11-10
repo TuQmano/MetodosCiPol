@@ -108,6 +108,10 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
     Simplificados](https://github.com/rstudio/cheatsheets/raw/master/sf.pdf)
     con `{sf}`
 
+### CLASE 9
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase09/Clase9.html)
+
 -----
 
 ### \#MétodosCiPol

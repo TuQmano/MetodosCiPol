@@ -124,10 +124,10 @@ La magia comienza con `read_html()`
 
 --
 
-*[SelectoGadget](https://lh3.googleusercontent.com/9UZTDt4KTT2dfX9GbHxV5me2fpWl7ObWM7BuckxN20kwBLb7o_shpvQ_-UGUsXBP-NabsQtX9w=w128-h128-e365-rj-sc0x00ffffff)* al rescate!
+**`r icon::fa("link")` [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=es)** al rescate!
 
 ```{r, echo=FALSE, out.width="10%"}
-knitr::include_graphics("https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=es")
+knitr::include_graphics("https://selectorgadget.com/128x128.png")
 
 ```
 
@@ -166,9 +166,9 @@ background-size: 10%
 ```{r}
 
 library(rvest)
-lego_movie <- read_html("https://www.imdb.com/title/tt0089276/")
+LHO_movie <- read_html("https://www.imdb.com/title/tt0089276/")
 
-rating <- lego_movie %>%
+rating <- LHO_movie %>%
   html_nodes("strong span") %>%
   html_text() %>%
   as.numeric()
@@ -188,7 +188,10 @@ background-size: 10%
 
 >Las dos funciones principales del paquete, `bow()` y `scrape()`, definen y realizan una sesión de recolección de datos. `bow()` se utiliza para presentarnos al *host* y pedirle permiso para hacer `scrape` (consultando el archivo *robots.txt* del *host*), mientras que `scrape` es la función principal para recuperar datos del servidor remoto.
 
-https://dmi3kno.github.io/polite/
+
+
+[`r icon::fa("link")``{polite}`](https://dmi3kno.github.io/polite/)
+
 
 
 

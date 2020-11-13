@@ -115,9 +115,9 @@ La magia comienza con `read_html()`
 
 --
 
-*[SelectoGadget](https://lh3.googleusercontent.com/9UZTDt4KTT2dfX9GbHxV5me2fpWl7ObWM7BuckxN20kwBLb7o_shpvQ_-UGUsXBP-NabsQtX9w=w128-h128-e365-rj-sc0x00ffffff)* al rescate!
+**<i class="fas  fa-link "></i> [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=es)** al rescate!
 
-&lt;img src="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=es" width="10%" /&gt;
+&lt;img src="https://selectorgadget.com/128x128.png" width="10%" /&gt;
 
 ---
 background-image: url(https://github.com/tidyverse/rvest/raw/master/man/figures/logo.png)
@@ -155,9 +155,9 @@ background-size: 10%
 ```r
 
 library(rvest)
-lego_movie &lt;- read_html("https://www.imdb.com/title/tt0089276/")
+LHO_movie &lt;- read_html("https://www.imdb.com/title/tt0089276/")
 
-rating &lt;- lego_movie %&gt;%
+rating &lt;- LHO_movie %&gt;%
   html_nodes("strong span") %&gt;%
   html_text() %&gt;%
   as.numeric()
@@ -177,7 +177,10 @@ background-size: 10%
 
 &gt;Las dos funciones principales del paquete, `bow()` y `scrape()`, definen y realizan una sesión de recolección de datos. `bow()` se utiliza para presentarnos al *host* y pedirle permiso para hacer `scrape` (consultando el archivo *robots.txt* del *host*), mientras que `scrape` es la función principal para recuperar datos del servidor remoto.
 
-https://dmi3kno.github.io/polite/
+
+
+[<i class="fas  fa-link "></i>`{polite}`](https://dmi3kno.github.io/polite/)
+
 
 
 

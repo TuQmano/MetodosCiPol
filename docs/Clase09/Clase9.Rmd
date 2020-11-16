@@ -66,6 +66,15 @@ class:  center, middle
 
 ---
 
+
+## `r icon::fa("book")` Referencias
+
+* [*Web Scraping with R*, Steve Pittard (2020)](https://steviep42.github.io/webscraping/book/)
+
+* [*21 Recipes for Mining Twitter Data with rtweet*, Bob Rudis (2018)](https://rud.is/books/21-recipes/)
+
+---
+
 # Acceso a datos desde R
 
 ### Paquetes para datos de Argentina
@@ -152,7 +161,7 @@ background-size: 10%
  `html_attr()` - contenido de un solo atributo y `html_attrs()` - todos los atributos.
 
 
-<https://rvest.tidyverse.org/>
+`r icon::fa("link")`<https://rvest.tidyverse.org/>
 
 
 ---

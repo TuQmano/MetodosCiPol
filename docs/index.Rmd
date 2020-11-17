@@ -110,6 +110,14 @@ output:
 
 
 
+### CLASE 10
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
+
+
+
+
+
 ---
 
 ###  #MétodosCiPol

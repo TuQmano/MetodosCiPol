@@ -112,6 +112,10 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 
   - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase09/Clase9.html)
 
+### CLASE 10
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
+
 -----
 
 ### \#MétodosCiPol

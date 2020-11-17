@@ -107,6 +107,10 @@ always_allow_html: true
 * [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase09/Clase9.html)
 
 
+### CLASE 10
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
+
 
 
 ---

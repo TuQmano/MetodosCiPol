@@ -1,0 +1,259 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+subtitle: "[CP44] Maestría en Ciencia Política"
+author: "Juan Pablo Ruiz Nicolini"
+institute: "Universidad Torcuato Di Tella"
+date: "24/11/2020"
+output:
+  xaringan::moon_reader:
+    css: styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+exclude: true
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3,
+                      out.width = 300, ### control plot size
+                      cache = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+
+
+knitr::knit_hooks$set(crop = knitr::hook_pdfcrop)
+
+library(polAr)
+library(tidyverse)
+
+```
+
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons",
+                                    "webcam", "panelset"))
+
+xaringanExtra::use_webcam(width = 900, height = 400)
+```
+
+
+
+---
+
+class: middle, center
+
+
+## SESIÓN 11
+#### Comunicación y Análisis Reproducible
+
+
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+
+
+---
+
+# Ciencia de Datos:  
+
+
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science.svg")
+
+```
+
+
+---
+
+# Ciencia de Datos:  
+
+## Domar los Datos
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science-wrangle.svg")
+
+```
+
+
+---
+
+# Ciencia de Datos:  
+
+## Exploración de Datos
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science-explore.svg")
+
+```
+
+
+---
+
+# Ciencia de Datos:  
+
+## Programación 
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science-program.svg")
+
+```
+
+
+
+
+---
+
+# Ciencia de Datos:  
+
+### El final del ciclo: Comunicar 
+
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science-communicate.svg")
+
+```
+
+`r icon::fa("link")` <https://es.r4ds.hadley.nz/introducci%C3%B3n-18.html>
+
+
+
+---
+
+## `r icon::fa("book")` Referencias
+
+* _Comunicar_ en  [R4DS](https://es.r4ds.hadley.nz/introducci%C3%B3n-18.html), **Grolemund y Wickham**
+
+--
+
+* [R Markdown: The Definivite Guide](https://bookdown.org/yihui/rmarkdown/), **Yihui Xie, J. J. Allaire y Garrett Grolemund** 
+
+--
+
+* [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/), **Yihui Xie, Amber Thomas y Alison Presmanes Hill **
+
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/rmarkdown.png)
+background-position: 95% 5%
+background-size: 10%
+
+## Un paquete para gobernarlos a todos
+
+**[`{rmarkdown}`](https://github.com/rstudio/rmarkdown)**
+
+--
+
+* Hacer ciencia de datos de manera interactiva en la interfaz de _RStudio_
+
+--
+
+* Análisis Reproducible
+
+--
+
+* Compartir código y trabajo colaborativo
+
+--
+
+* Comunicar los resultados
+
+--
+
+
+**`r icon::fa("link")` [R Markdown - Documentación](https://rmarkdown.rstudio.com/articles.html)**
+
+---
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/rmarkdown.png)
+background-position: 95% 5%
+background-size: 10%
+
+## Una manera de escribir 
+
+### Muchas salidas posibles 
+
+
+```{r, echo=FALSE, out.width="40%", fig.align="center"}
+knitr::include_graphics("https://es.r4ds.hadley.nz/screenshots/rmarkdown-knit.png")
+
+```
+
+_knitear_ : `Ctrl + Shift + K`
+
+
+`r icon::fa("link")` <https://es.r4ds.hadley.nz/formatos-de-r-markdown.html>
+
+
+
+---
+class: inverse, middle, center
+
+# ¿Cómo es el proceso?
+
+```{r, echo = FALSE, out.width="60%"}
+
+knitr::include_graphics("https://es.r4ds.hadley.nz/images/RMarkdownFlow.png")
+
+
+```
+
+---
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/rmarkdown.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Variantes de salidas
+
+1. Documentos / Artículos 
+
+2. _Dashboards_ 
+
+3. Sitio web 
+
+4. Presentaciones 
+
+`r icon::fa("link")`  <https://rmarkdown.rstudio.com/formats.html>
+
+
+---
+
+# Ejemplos
+
+####  1. [Artículo](https://github.com/TuQmano/presentaciones-LatinR2020)
+
+* `{rticles}` 
+* `{latinr}` 
+
+--
+
+#### 2. [Presentación](https://github.com/TuQmano/MetodosCiPol/tree/master/docs/Clase01)
+
+
+
+* [`{xaringan}`](https://github.com/yihui/xaringan) - [Slides](https://slides.yihui.org/xaringan/#1) - [Tutorial](https://xaringantutorial.netlify.app/)
+  +  [`{xaringanExtra}`](https://pkg.garrickadenbuie.com/xaringanExtra) 
+  +  `{xaringanthemer}`
+
+
+--
+
+#### 3. [blog](https://github.com/TuQmano/tuqmano.com) 
+
+* [`{blogdown}`](https://bookdown.org/yihui/blogdown/)
+
+-- 
+
+#### 4. **Más**
+
+* [`{bookdown}`](https://bookdown.org/)
+* [`{thesisdown}`](https://github.com/ismayc/thesisdown)

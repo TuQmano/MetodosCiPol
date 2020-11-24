@@ -116,6 +116,17 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 
   - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
 
+### CLASE 11
+
+  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase11/Clase11.html)
+
+#### Machetes
+
+  - [Análisis
+    Reproducible](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/rmarkdown-2.0_Spanish.pdf)
+    con `R Markdown` (documentos, reportes, presentaciones, dabshboards,
+    sitios web)
+
 -----
 
 ### \#MétodosCiPol
@@ -128,6 +139,6 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 
 ##### [<!--html_preserve--><i class="fas  fa-globe "></i><!--/html_preserve-->](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/)
 
-##### [<!--html_preserve--><i class="fab  fa-twitter "></i><!--/html_preserve-->](https://twitter.com/TuQmano) [TuQmano](https://twitter.com/TuQmano)
+##### [<!--html_preserve--><i class="fab  fa-twitter "></i><!--/html_preserve-->](https://twitter.com/TuQmano) [tw: TuQmano](https://twitter.com/TuQmano)
 
-##### [<!--html_preserve--><i class="fab  fa-github "></i><!--/html_preserve-->](https://github.com/tuqmano) [TuQmano](https://github.com/tuqmano)
+##### [<!--html_preserve--><i class="fab  fa-github "></i><!--/html_preserve-->](https://github.com/tuqmano) [github: TuQmano](https://github.com/tuqmano)

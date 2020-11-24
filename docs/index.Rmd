@@ -114,6 +114,13 @@ output:
 
 * [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
 
+### CLASE 11
+
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase11/Clase11.html)
+
+#### Machetes 
+
+* [Análisis Reproducible](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/rmarkdown-2.0_Spanish.pdf) con `R Markdown` (documentos, reportes, presentaciones, dabshboards, sitios web)
 
 
 

@@ -251,7 +251,6 @@ background-size: 10%
 
 * [`{blogdown}`](https://bookdown.org/yihui/blogdown/)
 
--- 
 
 #### 4. **Más**
 

@@ -7,14 +7,8 @@
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
     <script src="libs/anchor-sections/anchor-sections.js"></script>
-    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
-    <script src="libs/tile-view/tile-view.js"></script>
-    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
-    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <link href="libs/panelset/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset/panelset.js"></script>
     <script src="libs/xaringanExtra-webcam/webcam.js"></script>
-    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"900","height":"400","margin":"1em"}</script>
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
@@ -202,33 +196,114 @@ background-size: 10%
 
 # Ejemplos
 
-####  1. [Artículo](https://github.com/TuQmano/presentaciones-LatinR2020)
+####  1. [Artículos](https://github.com/TuQmano/latinr2020/)
 
-* `{rticles}` 
-* `{latinr}` 
+Paquetes con plantillas para la edición de artículos para múltiples revistas académicas que sirven de base para diseñar plantillas propias como [`{rticles}`](https://github.com/rstudio/rticles) o [`{latinr}`](https://github.com/LatinR/latinr/) 
 
---
-
-#### 2. [Presentación](https://github.com/TuQmano/MetodosCiPol/tree/master/docs/Clase01)
+Presentación de `{polAr}` en LatinR 2020 usando plantilla de `{latinr}`
+&lt;img src="tests_rmd/ejemplo_latinrR/polar_latinr.PNG" width="100%" /&gt;
 
 
+---
+background-image: url(https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png)
+background-position: 95% 5%
+background-size: 10%
 
-* [`{xaringan}`](https://github.com/yihui/xaringan) - [Slides](https://slides.yihui.org/xaringan/#1) - [Tutorial](https://xaringantutorial.netlify.app/)
-  +  [`{xaringanExtra}`](https://pkg.garrickadenbuie.com/xaringanExtra) 
-  +  `{xaringanthemer}`
+
+# Ejemplos
+
+#### 2. [Presentación](https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png)
 
 
---
+* Presentaciones Ninja con [`{xaringan}`](https://github.com/yihui/xaringan) 
+
+  +  [Slides](https://slides.yihui.org/xaringan/#1) 
+  +  [Tutorial](https://xaringantutorial.netlify.app/)
+  +  Múltiples extensiones con [`{xaringanExtra}`](https://pkg.garrickadenbuie.com/xaringanExtra) 
+  +  Configurar estilos de filminas con [`{xaringanthemer}`](https://github.com/gadenbuie/xaringanthemer) 
+
+
+---
+background-image: url(https://camo.githubusercontent.com/d86fadc46868e607e1830c75a426bae16ef8edebea5c3037720404fe452f4c95/68747470733a2f2f626f6f6b646f776e2e6f72672f79696875692f626c6f67646f776e2f696d616765732f6c6f676f2e706e67)
+background-position: 95% 5%
+background-size: 10%
+
+
+
+# Ejemplos
 
 #### 3. [blog](https://github.com/TuQmano/tuqmano.com) 
 
-* [`{blogdown}`](https://bookdown.org/yihui/blogdown/)
+Crear un sitio web en 5 minutos con [`{blogdown}`](https://bookdown.org/yihui/blogdown/)
 
 
-#### 4. **Más**
+```r
 
-* [`{bookdown}`](https://bookdown.org/)
-* [`{thesisdown}`](https://github.com/ismayc/thesisdown)
+## Install from CRAN
+install.packages('blogdown')
+
+blogdown::new_site()  # Se pueden explorar templates para 
+                      # sitios en https://themes.gohugo.io
+
+```
+
+
+Documentación completa disponible en &lt;https://bookdown.org/yihui/blogdown/&gt;
+
+
+---
+
+background-image: url(https://camo.githubusercontent.com/d7b356c04770e4e9844d1b46af430f4198b88f238761076128fd7434ae361bc2/68747470733a2f2f626f6f6b646f776e2e6f72672f79696875692f626f6f6b646f776e2f696d616765732f6c6f676f2e706e67)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Ejemplos
+
+#### 4. **Libros**
+
+Editar libros y publicarlos con [`{bookdown}`](https://bookdown.org/)
+
+* generar _ebooks_ y documentos listos para impresión desde *RMarkdown*
+
+* un lenguaje más fácil de aprender que `\(\LaTeX\)` 
+
+* múltiples opciones de salida (`.pdf`, `\(\LaTeX\)`, `HTML`, `EPUB`)
+
+* posibilidad de incluir gráficos dinámicos y aplicaciones interactivas
+
+* soporta otros lengügajes además de `R` como `Python` o `SQL`
+
+* intergado al IDE `RStudio` 
+
+* posibilidad de publicación en múltiples destinos (`github`, `bookdown.org`)
+
+
+
+
+
+
+---
+
+background-image: url(https://github.com/ismayc/thesisdown/raw/master/man/figures/thesisdown_hex.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+
+# Ejemplos
+
+#### 5. **Tesis**
+
+Usar [`{thesisdown}`](https://github.com/ismayc/thesisdown) como extensión del desarrollo de `{bookdown}` para generar plantillas de tesis con el formato requerido por distintos centros académicos. 
+
+
+**Extra**: Plantilla en `\(\LaTeX\)` para [Tesis de Maestría en Ciencia Política - Universidad Torcuato Di Tella](https://github.com/TuQmano/template_Thesis.UTDT)
+
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

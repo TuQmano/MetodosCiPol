@@ -1,0 +1,311 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+subtitle: "[CP44] Maestría en Ciencia Política"
+author: "Juan Pablo Ruiz Nicolini"
+institute: "Universidad Torcuato Di Tella"
+date: "27/10/2020"
+output:
+  xaringan::moon_reader:
+    css: styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+exclude: true
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3,
+                      out.width = 300, ### control plot size
+                      cache = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+
+
+knitr::knit_hooks$set(crop = knitr::hook_pdfcrop)
+
+library(polAr)
+library(tidyverse)
+
+```
+
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons",
+                                    "webcam", "panelset"))
+
+xaringanExtra::use_webcam(width = 900, height = 400)
+```
+
+
+
+---
+
+class: middle, center
+
+
+## SESIÓN 7
+### Data Viz (II)
+
+#### Las muchas capas de `ggplot2 +` extensiones
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+---
+class: inverse, center, middle
+
+# Sus primeros gráficos
+
+---
+
+background-image: url(https://github.com/electorArg/polAr/blob/master/hex/hex-polAr.png?raw=true)
+background-position: 95% 5%
+background-size: 10%
+
+# Composición de gráficos
+
+```{r, echo = F, out.width="65%"}
+
+library(polAr)
+
+eleccion03 <- get_election_data("arg", "presi", "gral", 2003)
+
+electores_provincias <- eleccion03 %>% 
+  select(name_prov, electores) %>% 
+  distinct() 
+
+
+resultados <- eleccion03 %>% 
+  get_names() %>% 
+  select(nombre_lista, name_prov, votos) %>% 
+  mutate(pct = round(votos/sum(votos)*100,1)) %>% 
+  group_by(name_prov) %>% 
+  slice_max(order_by = pct, n = 2) %>% 
+  mutate(dif = abs(pct - lead(pct))) %>% 
+  fill(dif,  .direction = "down") 
+  
+
+
+#### GRAFICOS
+
+
+electores_plot <- ggplot(electores_provincias) +
+  geom_col(aes(x = electores/1000, 
+                  y = fct_reorder(name_prov, electores)))
+
+resultados_plot <- ggplot(resultados) +
+  geom_point(aes(x = pct,
+                 y = fct_reorder(name_prov, dif), 
+                 color = nombre_lista)) +
+  theme(legend.position = "bottom")
+
+
+### 
+library(patchwork)
+
+  electores_plot + resultados_plot
+
+  
+```
+
+
+
+---
+
+background-image: url(https://patchwork.data-imaginist.com/reference/figures/logo.png) 
+background-position: 95% 5%
+background-size: 10%
+
+# Composición de gráficos
+
+[`r icon::fa("link")``{patchwork}`](https://patchwork.data-imaginist.com/)
+
+
+```{r}
+
+library(ggplot2)
+library(patchwork) #<<
+
+p1 <- ggplot(mtcars) + geom_point(aes(mpg, disp))
+p2 <- ggplot(mtcars) + geom_boxplot(aes(gear, disp, group = gear))
+
+p1 + p2 #<<
+
+```
+
+
+---
+
+background-image: url(https://patchwork.data-imaginist.com/reference/figures/logo.png) 
+background-position: 95% 5%
+background-size: 10%
+
+
+# Composición de gráficos
+
+[`r icon::fa("link")``{patchwork}`](https://patchwork.data-imaginist.com/)
+
+
+```{r}
+
+p3 <- ggplot(mtcars) + geom_smooth(aes(disp, qsec))
+p4 <- ggplot(mtcars) + geom_bar(aes(carb))
+
+(p1 | p2 | p3) / #<<
+      p4         #<<
+
+```
+
+
+---
+
+background-image: url(https://wilkelab.org/cowplot/reference/figures/logo.png) 
+background-position: 95% 5%
+background-size: 10%
+
+
+## Composición de gráficos
+
+[`r icon::fa("link")``{cowplot}`](https://wilkelab.org/cowplot/index.html)
+
+
+```{r include=FALSE}
+library(cowplot)
+
+cow_plot <- resultados_plot +
+  theme_cowplot() +
+  theme(legend.position = "bottom")
+  
+
+
+
+```
+
+```{r}
+library(cowplot)
+
+logo_file <- "https://github.com/electorArg/polAr/blob/master/hex/hex-polAr.png?raw=true"
+
+ggdraw(cow_plot) +
+  draw_label(label = "HECHO CON", color = "blue", size = 40, angle = 45 , alpha = .5) +
+  draw_image(logo_file, x = 1, y = 1.1, hjust = 1, vjust = 1, width = 0.15)
+
+
+
+```
+
+---
+
+background-image: url(https://github.com/RobWHickman/ggparliament/raw/master/man/figures/HexSticker.png) 
+background-position: 95% 5%
+background-size: 10%
+
+# Dibujar legislaturas
+
+
+
+
+
+```{r, echo = FALSE, out.width="50%"}
+knitr::include_graphics("https://www.tuqmano.com/post/2020-03-15-dibujar-legislaturas_files/figure-html/plot-1.png")
+```
+
+
+[`r icon::fa("link")``{ggparliament}`](https://patchwork.data-imaginist.com/) | [`r icon::fa("link")` blogpost](https://www.tuqmano.com/2020/03/15/dibujar-legislaturas/)
+
+
+
+
+
+---
+
+
+background-image: url(https://ggforce.data-imaginist.com/reference/figures/logo.png) 
+background-position: 95% 5%
+background-size: 10%
+
+# + Extensiones 
+
+
+
+[`r icon::fa("link")` blogpost](https://www.tuqmano.com/2019/04/18/diagramas/)
+
+
+```{r, echo = FALSE, out.width="75%"}
+knitr::include_graphics("https://www.tuqmano.com/post/2019-04-18-diagramas_files/figure-html/CODE%20GOT-1.png")
+```
+
+[`r icon::fa("link")` Documentación de `geom_parallel_set()`](https://ggforce.data-imaginist.com/reference/geom_parallel_sets.html) de [`r icon::fa("link")``{ggforce}`](https://ggforce.data-imaginist.com/)
+
+
+---
+
+## MISC 
+
+### Themes
+
+* `{ggthemes}` <https://jrnold.github.io/ggthemes/index.html>
+
+
+* `{hrbthemes}` <https://cinc.rud.is/web/packages/hrbrthemes/>
+
+--
+
+### Fonts
+
+* `{extrafont}` <https://github.com/wch/extrafont>
+
+--
+
+### `+` 
+
+* `{ggtern}` <https://github.com/nicholasehamilton/ggtern>
+
+* `{plotly}` <https://plotly-r.com/>
+
+* **The `R` Graph Gallery** <https://www.r-graph-gallery.com/>
+
+---
+
+class: inverse, middle, center
+
+
+# *Data Viz* con tabulados
+
+
+
+
+
+---
+
+background-image: url(https://github.com/rstudio/gt/raw/master/man/figures/logo.svg) 
+background-position: 95% 5%
+background-size: 10%
+
+## Una gramática para tablas
+
+
+[`r icon::fa("link")` `{gt}`](https://github.com/rstudio/gt)
+
+```{r, echo = FALSE, out.width="90%"}
+knitr::include_graphics("https://github.com/rstudio/gt/raw/master/man/figures/gt_parts_of_a_table.svg")
+```
+
+
+**OTROS:**  [`r icon::fa("link")` `{kableExtra}`](https://haozhu233.github.io/kableExtra/) | [`r icon::fa("link")` `{formattable}`](https://renkun-ken.github.io/formattable/) | [`r icon::fa("link")` `{DT}`](https://rstudio.github.io/DT/) | [`r icon::fa("link")` `{stargazer}`](https://cran.r-project.org/web/packages/stargazer/index.html) 
+
+---
+
+class:  middle, center
+
+# Práctica con **datos** de #MétodosCiPol
+
+### <https://tuqmano.github.io/MetodosCiPol/datos.html>
+

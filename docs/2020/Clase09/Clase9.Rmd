@@ -1,0 +1,216 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+subtitle: "[CP44] Maestría en Ciencia Política"
+author: "Juan Pablo Ruiz Nicolini"
+institute: "Universidad Torcuato Di Tella"
+date: "10/11/2020"
+output:
+  xaringan::moon_reader:
+    css: styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+exclude: true
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3,
+                      out.width = 300, ### control plot size
+                      cache = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+
+
+knitr::knit_hooks$set(crop = knitr::hook_pdfcrop)
+
+library(polAr)
+library(tidyverse)
+
+```
+
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons",
+                                    "webcam", "panelset"))
+
+xaringanExtra::use_webcam(width = 900, height = 400)
+```
+
+
+
+---
+
+class: middle, center
+
+
+## SESIÓN 9
+#### API + Scraping
+
+
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+---
+class:  center, middle
+
+# Práctica: Sus mapas de `polAr` 
+
+
+---
+
+
+## `r icon::fa("book")` Referencias
+
+* [*Web Scraping with R*, Steve Pittard (2020)](https://steviep42.github.io/webscraping/book/)
+
+* [*21 Recipes for Mining Twitter Data with rtweet*, Bob Rudis (2018)](https://rud.is/books/21-recipes/)
+
+---
+
+# Acceso a datos desde R
+
+### Paquetes para datos de Argentina
+
+* [{eph}](https://holatam.github.io/eph/)
+
+* [{polAr}]()
+
+* [{transporte}](https://github.com/juanifulponi/transporteAR)
+
+--
+
+### Uso de APIs (_wrappers_)
+
+* [{RUMBA}](https://github.com/bitsandbricks/RUMBA) - API: <http://servicios.usig.buenosaires.gob.ar/normalizar>
+
+* [{georefar}](https://github.com/pdelboca/georefar) - API: <https://georef-ar-api.readthedocs.io/es/latest/>
+
+* [{hacienda}](https://github.com/fmgarciadiaz/PortalHacienda-CRAN) - API: <https://series-tiempo-ar-api.readthedocs.io/es/latest/>
+
+---
+background-image: url(https://docs.ropensci.org/rtweet/reference/figures/logo.png)
+background-position: 95% 5%
+background-size: 10%
+
+https://docs.ropensci.org/rtweet/
+
+# Live Scraping 
+## #MetodosCiPol
+
+```{r, eval = FALSE}
+library(rtweet )
+
+rtweet::search_tweets("MetodosCiPol")
+
+
+```
+
+
+
+
+
+---
+background-image: url(https://github.com/tidyverse/rvest/raw/master/man/figures/logo.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Primeros pasos _rascando_ datos
+
+
+La magia comienza con `read_html()`
+
+--
+
+`{rvest}` permite seleccionar partes de un documento usando selectores **CSS**: `html_nodes` (doc, "table td") o  **XPath**  (doc, xpath = "// table // td")).
+
+--
+
+**`r icon::fa("link")` [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=es)** al rescate!
+
+```{r, echo=FALSE, out.width="10%"}
+knitr::include_graphics("https://selectorgadget.com/128x128.png")
+
+```
+
+---
+background-image: url(https://github.com/tidyverse/rvest/raw/master/man/figures/logo.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Primeros pasos _rascando_ datos
+
+
+### Extraer componentes:
+
+ `html_name()`- el nombre de la etiqueta, 
+ 
+--
+ 
+ `html_text()` - todo el texto dentro de la etiqueta,
+ 
+--
+ 
+ `html_attr()` - contenido de un solo atributo y `html_attrs()` - todos los atributos.
+
+
+`r icon::fa("link")`<https://rvest.tidyverse.org/>
+
+
+---
+background-image: url(https://github.com/tidyverse/rvest/raw/master/man/figures/logo.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# La Historia Oficial
+
+```{r}
+
+library(rvest)
+LHO_movie <- read_html("https://www.imdb.com/title/tt0089276/")
+
+rating <- LHO_movie %>%
+  html_nodes("strong span") %>%
+  html_text() %>%
+  as.numeric()
+
+rating
+
+```
+
+
+---
+
+background-image: url(https://dmi3kno.github.io/polite/reference/figures/logo.png)
+background-position: 95% 5%
+background-size: 10%
+
+# _Raspado_ respetuoso
+
+>Las dos funciones principales del paquete, `bow()` y `scrape()`, definen y realizan una sesión de recolección de datos. `bow()` se utiliza para presentarnos al *host* y pedirle permiso para hacer `scrape` (consultando el archivo *robots.txt* del *host*), mientras que `scrape` es la función principal para recuperar datos del servidor remoto.
+
+
+
+[`r icon::fa("link")``{polite}`](https://dmi3kno.github.io/polite/)
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# Ejemplos
+
+### _Wikipedia_
+
+### Discursos Presidenciales
+

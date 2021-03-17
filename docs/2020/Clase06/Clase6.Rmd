@@ -1,0 +1,444 @@
+---
+title: "Herramientas Cuantitativas para el Análisis Político"
+subtitle: "[CP44] Maestría en Ciencia Política"
+author: "Juan Pablo Ruiz Nicolini"
+institute: "Universidad Torcuato Di Tella"
+date: "20/10/2020"
+output:
+  xaringan::moon_reader:
+    css: styles.css
+    lib_dir: libs
+    nature:
+      countdown: 60000
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+exclude: true
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3,
+                      out.width = 300, ### control plot size
+                      cache = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+
+
+library(polAr)
+library(tidyverse)
+
+```
+
+
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons",
+                                    "webcam", "panelset"))
+
+xaringanExtra::use_webcam(width = 900, height = 400)
+```
+
+
+
+---
+
+class: middle, center
+
+
+## SESIÓN 6
+### Data Viz (I)
+#### `ggplot2` y la _Gramática de los Gráficos_
+
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+---
+class: inverse
+
+# Ejercicios
+
+### 1). Cómo _tideamos_ las direcciones?
+
+--
+
+### 2). Cómo hacemos *long* las elecciones con iteraciones?
+
+---
+
+# Garmática de los Gráficos
+
+
+>**Un conjunto formal de reglas para la producción de gráficos estadísticos**
+
+> **Se basa en la definición de capas**
+
+**Leland Wilkinson**
+ 
+--
+
+* Estadística y Ciencia de Computación  `+`
+ 
+--
+
+* Experto en Viz (_SPSS, Tableau_) `+`
+
+--
+
+`->`  _**Grammar of Graphics**_ (1999)    
+
+
+
+---
+
+## `r icon::fa("book")`Referencias (I)
+
+En la [bibliografía](https://tuqmano.github.io/MetodosCiPol/bibliografia.html) del curso se destacan tres libros relevantes:
+
+- `ggplot2`: _**Elegant Graphics for Data Analysis**_ (**H. Wickham**) es el material principal con definiciones de la aplicación de la _gramática de gráficos_ en `R`. 
+
+--
+
+- _**Data Visualization: A Pracitcal Introduction**_ (**K. Heley**) disute principios sobre visualización de datos, y consejos práctivos de su aplicación acompañado de código en `R` par reproducirlos. 
+
+--
+
+- En _**Fundamentals of Data Visualization**_ (**Claus Wilke**) presentan argumentos y consejos para realizar visualizaciones profesionales que representen correctamente los datos. 
+
+---
+
+## `r icon::fa("book")`Referencias (II)
+
+
+1. _Visualización de Datos (Intro)_, en "[R para Ciencia de Datos](https://es.r4ds.hadley.nz/visualizaci%C3%B3n-de-datos.html#introducci%C3%B3n-1)" (Wickham y Grolemnud).
+
+2. [_ModernDive_](https://moderndive.com/2-viz.html)
+
+3. [(a) Urdinez y Cruz](https://arcruz0.github.io/libroadp/dataviz.html); [(b) Montané](https://martinmontane.github.io/CienciaDeDatosBook/visualizaciones-de-datos-en-r.html); y [(c) Vázquez Brust](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/visualizaci%C3%B3n.html). 
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+#### La **g**ramatica de los **g**ráficos en `R` [`r icon::fa("link")``{ggplot2}`](https://ggplot2.tidyverse.org/index.html)
+
+### _Dibujando por capas_
+
+
+```{r, echo = FALSE}
+
+knitr::include_graphics("http://mikelmadina.com/images/lgg_layers_mal.jpg")
+
+
+```
+
+--
+
+**`r icon::fa("youtube")`** [_Plotting Anything with `ggplot2`_](https://www.youtube.com/watch?v=h29g21z0a68) - Thomas Lin Pedersen.
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+### RECETA BASICA
+
+#### **VIZ COMO PARTE DEL ANALISIS EXPLORATORIO DE DATOS (_EDA_)**
+
+```{r,eval=FALSE}
+
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+
+```
+
+
+
+---
+
+background-image: url(https://cienciadedatos.github.io/datos/reference/figures/logo.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+### `millas` del   [paquete `r icon::fa("link")``{datos}`](https://cienciadedatos.github.io/datos/)
+
+
+
+
+```{r}
+
+library(datos)
+as.tibble(millas)
+
+```
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+```{r}
+ggplot(data = millas) +  # DATASET 
+  geom_point(mapping = aes(x = cilindrada,      # MAPEO DE VARIABLES
+                           y = autopista)) 
+
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+ 
+```{r, out.width="50%"}
+ggplot(data = millas) +  
+  geom_point(mapping = aes(x = cilindrada,      
+                           y = autopista, # 'Esteticas'        
+                           colour = clase)) #<<    
+
+```
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+
+```{r, out.width="50%"}
+
+ggplot(data = millas) +  
+  geom_point(mapping = aes(x = cilindrada,      
+                           y = autopista,
+                           colour = "blue")) #<<    
+
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+
+```{r, out.width="50%"}
+
+ggplot(data = millas) +  
+  geom_point(mapping = aes(x = cilindrada,      
+                           y = autopista), 
+             colour = "blue") #<<    
+
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+Cada geometría tiene parámetros específicos que pueden ser ajustados.  El **color** es uno de ellos. 
+
+--
+### SHAPE
+
+A `geom_point` podemos asignarle una forma particular en función de valores de alguna variable, por ejemplo:
+
+```{r, echo=F}
+knitr::include_graphics("https://es.r4ds.hadley.nz/03-visualize_files/figure-html/unnamed-chunk-8-1.png")
+```
+
+
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+## FACETAS 
+
+```{r, out.width= "45%"}
+ggplot(data = millas) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  facet_wrap(~ clase, nrow = 2) #<<
+
+```
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+
+### GEOMETRIAS 
+
+```{r echo = FALSE, out.width = "35%", fig.align="default", message = FALSE}
+ggplot(data = millas) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista))
+
+ggplot(data = millas) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista))
+```
+
+--
+
+```{r, eval=FALSE}
+# izquierda
+ggplot(data = millas) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) #<<
+
+# derecha
+ggplot(data = millas) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista)) #<<
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+
+```{r, out.width="35%"}
+
+ggplot(data = millas) +
+  geom_point(mapping = aes(x = cilindrada, y = autopista)) +
+  geom_smooth(mapping = aes(x = cilindrada, y = autopista))
+
+
+```
+
+**Integramos los dos `geom_` como capas de un mismo gráfico** 
+
+--
+
+### Que notan en el código?
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+**Podemos asignar parametros _globales_ para todo el gráfico (que pueden ser sobrescritos en capas siguientes)**
+
+```{r}
+
+ggplot(data = millas, aes(x = cilindrada, y = autopista)) +
+  geom_point() +
+  geom_smooth()
+
+
+```
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+```{r}
+
+ggplot(millas, aes(cilindrada, autopista)) +
+  geom_point() +
+  geom_smooth()
+
+
+```
+
+**Se pueden elidir los nombres de parámetros**
+
+--
+
+**`r icon::fa("link")`** Más detalle en esta [`Intro a {ggplot}`]("https://es.r4ds.hadley.nz/visualizaci%C3%B3n-de-datos.html")
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/ggplot2.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+# Data Viz (I)
+
+```{r, echo=FALSE, out.width="70%"}
+
+ggplot(millas, aes(cilindrada, autopista)) +
+  geom_point() +
+  geom_point(data = millas %>% 
+               filter(fabricante == "audi"), color = "blue", size =3) +
+  geom_smooth(se = FALSE) +
+  labs(title = "Performance de los AUDI", 
+           subtitle = "Un gráfico del TuQmano", 
+        y = "Etiqueta Y", 
+        x = "Etiqueta X", 
+        caption = "FUENTE: {datos} 'R Para Ciencia de Datos'") +
+  ggthemes::theme_wsj()
+
+
+```
+
+
+---
+
+class:  center, middle
+
+
+# _live coding_ con {polAr}
+
+

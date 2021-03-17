@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Herramientas Cuantitativas para el Análisis Político</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Juan Pablo Ruiz Nicolini" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections/anchor-sections.js"></script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"900","height":"400","margin":"1em"}</script>
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <link href="libs/wordcloud2/wordcloud.css" rel="stylesheet" />
+    <script src="libs/wordcloud2/wordcloud2-all.js"></script>
+    <script src="libs/wordcloud2/hover.js"></script>
+    <script src="libs/wordcloud2-binding/wordcloud2.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Herramientas Cuantitativas para el Análisis Político
+## [CP44] Maestría en Ciencia Política
+### Juan Pablo Ruiz Nicolini
+### Universidad Torcuato Di Tella
+### 17/11/2020
+
+---
+
+
+exclude: true
+
+
+
+
+
+
+
+
+---
+
+class: middle, center
+
+
+## SESIÓN 10
+#### Minería de Texto
+
+
+
+#### [<i class="fas  fa-globe "></i>/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [<i class="fab  fa-github "></i>/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+---
+
+# Análisis Cuantitativo de Texto
+
+### Paquetes relevantes
+
+* [{tm}](http://tm.r-forge.r-project.org/)
+
+* [{quanteda}](https://quanteda.io/reference/index.html) 
+
+* [{topicmodels}](https://cran.r-project.org/web/packages/topicmodels/vignettes/topicmodels.pdf)
+
+---
+background-image: url(https://www.tidytextmining.com/images/cover.png)
+background-position: 95% 15%
+background-size: 33%
+
+## <i class="fas  fa-book "></i> Referencias
+
+* [Text Mining Infraestructure in R](https://www.jstatsoft.org/article/view/v025i05) - `{tm}` 
+
+
+* (Tidy) [Text Mining with R](https://www.tidytextmining.com/), **Silge y Robinson <i class="fas  fa-arrow-right "></i>**
+
+* _"Análisis Cuantiativo de Textos"_, en [Urdinez y Cruz](https://arcruz0.github.io/libroadp/qta.html)
+
+---
+background-image: url(https://juliasilge.github.io/tidytext/reference/figures/tidytext.png)
+background-position: 95% 5%
+background-size: 10%
+
+## Tidy Text Data
+
+[<i class="fas  fa-link "></i>`{tidytext}`](https://juliasilge.github.io/tidytext/index.html)
+
+![](https://www.tidytextmining.com/images/tmwr_0101.png)
+
+
+---
+background-image: url(https://juliasilge.github.io/tidytext/reference/figures/tidytext.png)
+background-position: 95% 5%
+background-size: 10%
+
+### Tidy Data 
+
+1. Cada variable en una columna
+2. Cada observación en una fila
+3. Cada celda es una observación
+
+--
+
+### ~ Tidy Text Data
+
+#### &gt; **one-token-per-row** con `unnest_tokens()` 
+
+---
+background-image: url(https://github.com/electorArg/polAr/blob/master/hex/hex-polAr.png?raw=true)
+background-position: 95% 5%
+background-size: 10%
+
+
+
+### Minando texto con `{polAr}`
+
+
+###  _**Juan Domingo Perón** (1946)_
+
+<div id="htmlwidget-ad29e737ae642d2f91b4" style="width:90%;height:35%;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ad29e737ae642d2f91b4">{"x":{"word":["pueblo","orden","aplausos","justicia","patria","gobierno","vida","debe","argentino","corazón","derecho","momento","nación","respeto","social","tierra","camino","libertad","paz","poder","popular","público","sentido","alma","deseo","hombre","honor","mundo","presidente","constitucional","convencimiento","cumplimiento","cuyo","económico","fe","fuerza","fuerzas","grandes","haber","hecho","hombres","igual","importancia","instituciones","labor","nacional","obra","política","sentimiento","trabajo","valor","voluntad","actos","ahora","ciudadanos","concepto","conducta","considero","constitución","constituyen","creado","creo","cuya","deberes","decisión","definitivamente","derechos","dignidad","fiel","gobernante","interés","ja","libre","mantener","mas","masas","normas","parlamento","problemas","pueblos","quieran","razón","redención","sentimientos","serenidad","soberanía","trabajadores","tradición","verdad","actividades","actuación","afirmar","anhelos","asamblea","bajo","caminos","campos","causa","cimientos","claro","clases","cosa","costumbres","cultura","debemos","deber","decir","defensa","desenvolvimiento","dirá","económica","ejemplo","espiritual","estructura","febrero","firme","general","gran","grave","habia","historia","indispensable","individual","injusticias","inspirar","instrumento","intenciones","internacional","internacionales","jornada","junio","ley","limite","lograr","lucha","manos","mayor","mayoría","mejor","mejores","nadie","necesario","normalidad","nuevos","organización","palabra","palabras","pesar","pleno","politica","politicas","poner","posibilidades","posible","principios","pública","pueda","puedan","realizaciones","recursos","respecto","restablecimiento","revolución","salvadora","sana","seguido","sepan","sociales","tiempo","triunfo","violencia","absoluto","acabo","acción","aceptado","acompanado","actual","admitir","advertir","afán","afirmaciones","agravios","agricultura","ajena","altivez","alto","antecedentes","añadir","arbitrariedad","arte","asi","aspectos","aspiración","aspiraciones","bienestar","brazo","buen","cabal","campo","capital","carácter","cargo","carta","civil","civilización","cl","clara","colaboración","cómo","compromiso","compromisos","conciencia","concreta","confianza","consejo","constitucionales","contribuir","conveniente","corrección","costa","cuerpo","culturas","cumplir","dado","dar","deberá","decisiones","defender","democrático","desarrollo","desconocimiento","después","destinos","difícil","dios","discurso","dispuesto","dudas","economía","económicamente","económicas","eficaz","ejecutiva","ejecutivo","ejercicio","elección","energéticos","enorgullece","entorpecer","escuela","esfera","especialmente","espiritu","espíritu","establecer","establecido","ética","evitar","exige","exterior","fa","fiestas","frase","fundamental","futura","generación","gesto","grande","habitantes","hechos","hiciera","honorabilidad","honradez","hora","humanidad","humano","huyendo","idea","incesante","incurrido","independiente","industria","industriales","industrialización","iniciativas","injusticia","intangible","intereses","interno","irrevocable","jerarquía","jos","juicio","legisladores","leyes","lograrlo","magistratura","manejo","maravillosa","marco","margen","medida","mejoramiento","menor","métodos","momentos","morales","motivo","nacionales","naciones","naturales","naturalmente","necesitamos","noción","nuevas","número","ocasión","ocultas","oportunidad","organismo","organismos","otorga","paises","palmo","partidos","pasiones","paso","patriotismo","pido","podemos","podido","podrá","politicos","políticos","porvenir","posguerra","posición","postulados","preciado","prendido","presidencial","pretendan","primera","principio","prioridad","producción","progreso","propia","propio","propios","prueba","públicos","punto","realidad","realización","recabar","recorrido","recta","recuerdo","recurso","reforma","renta","representación","representantes","representar","republica","requieren","responsabilidad","restantes","resto","resueltamente","revolucionario","ruta","sacrificio","sangre","satisfacción","sectores","senda","senores","servicios","siente","sienten","simple","sirva","soberania","soberano","sociedad","sucede","suelo","temido","término","ternura","terreno","tradicional","tranquilidad","trascendental","trayectoria","veces","venganza","ver","victoria","virtud","vivir","volvemos","1910el","4edpusas","a’esperar","abandonada","abandono","abierta","abierto","abiertos","abnegación","abordada","abordar","aborígenes","aborrezco","abra","abrazar","abusivas","acabamos","acabará","acciones","aceptables","aceptada","aceptadas","acepté","acerca","acercaba","acerquemos","acierten","acierto","acompanada","acompañado","acompañe","aconsejen","acrecientan","acreditados","actas","acto","acumulado","adaptación","adecuada","adecuado","ademas","adentra","adeuda","adeudaba","administrativa","administrativas","administrativo","admiten","adversarios","adversidad","advertencia","adviertan","advocación","afecten","afectos","afianzar","afirmado","afrontar","agraria","ahi","aire","aislados","ajenas","ajenos","ajustada","ajustarse","ajustasen","alaban","albedrío","alborozado","alcance","alcancen","alegría","alguien","alta","alteraciones","altivo","altos","alusión","amago","amarguras","ambas","ambicionamos","amenaza","américa","amigos","amistad","amjusticia","amor","ampararán","amparo","amplisimos","ancestral","andando","andes","andinos","anfluencias","angustias","anhelada","anhelamos","anhelan","anhelo","anidan","animados","ansia","antepondré","anterior","antigua","áorma","apalausos","aparece","aparecer","aparezca","apariencia","aparto","apasionamientos","apjar","aplastamiento","áplausos","aplicación","apoya","apoyo","aprecia","apreciar","aprender","apresurar","apropiacién","aprovechamiento","aprovechamientos","aprovechar","aprovisionamiento","aproximación","aproyisionamientos","arbitrariedades","arbitrios","arder","arduo","aristas","armadas","armas","armonía","armonizar","arquilosado","arriesgándose","artes","artificial","artística","as","ás","asaltaba","asentadas","asentar","asentimiento","asequibles","asfixiadas","asigna","asigno","asimilar","asimismo","asiste","asombra","áspera","aspiramos","aspiro","astas","asuntos","atacarnos","atenazar","atenerme","atengo","atmosfera","atribuciones","atropellos","aumentar","aumentat","ausente","autoriza","avanzan","avanzar","avecinan","aventajado","azar","azarosa","bancas","bandera","barata","bases","básica","básicas","bastar","batallas","bavio","bizantinas","borradas","brazos","brillantes","brillo","bruscos","buena","bueríos","burocratización","caballeros","caballos","caduco","callar","callejero","callejones","cámaras","cambios","campesino","candidatura","cano","cantos","capciosos","capitán","caprichosamente","caprichosas","captar","cara","caracteristicas","cardinales","cariño","cartera","casa","catástrofe","catastróficos","cauce","caudal","causado","causas","cconomico","cejaré","cerca","certera","chacarero","chacra","chocan","cielo","cien","ciencia","cier","ciernen","cierra","cierran","cimenta","cione","circunstancial","ciudadana","ciudadanía","ciudadano","ciudades","cívica","cívicas","claras","claridad","clarn","clasicismo","claudicacion","cn","coadyuven","cobardía","cohesión","colaboraciones","colaboradores","colectividades","colocar","comando","combatido","combatieron","combatives","cometida","comienzo","comites","comp","compaginar","compararse","comparsería","compás","compatible","compatibles","compenetra","compensaciones","compensado","completo","comprendan","comprende","comprensivo","comprobada","comprometen","comprometer","común","comunes","comunicación","comunicativo","conceda","concepciones","conceptos","concesiones","conculcar","condensado","condición","conducción","conduciría","confiáda","confiárseles","confió","conflictos","confundirse","conmovido","conocimiento","conquista","consagración","consecuencia","consenso","consentir","conservador","conservadoras","consesuir","consideración","consolidación","consolidar","conste","constituye","construcciones","constructivo","construir","consumidor","contagiosa","contemplar","contienda","contraer","contraídos","contrario","contribuido","convaleciente","convalidar","convencido","convencionalmente","convenga","conveniencias","convepnido","convergen","convergido","convertir","convicciones","convierte","convivencia","coraún","cordial","cornporta","corolario","correlacionado","correponde","corresponde","correspondo","corriente","corruptelas","cosas","coyunda","cpinión","crea","creación","creadora","creais","crear","cribando","criolla","crisis","cristiana","criterio","cruz","cuál","cualquiér","cuarteles","cuenta","cuento","cuestiones","cuidando","cuidar","culto","cultural","cumplido","custodia","dan","daño","daré","darse","deba","deben","debiera","debo","decia","decididos","decision","decisiva","decisivo","declaraciones","declaro","defección","defendemos","deficiencias","defienden","definen","definición","definiciones","definilivos","definitiva","dejado","dejando","dejandose","delegada","deleita","delicado","demanda","democráticas","den","denomi","denunciar","denuncien","dependencia","depósito","depura","depurar","derrumbarse","desafio","desaliento","desandar","desaparecido","descansa","descaradas","descarriadas","desconfianzas","desconocer","desconocido","desconocimientos","desconozca","desea","desempeña","desequilibrio","desertar","desgarrones","designación","desinterés","deslumbrada","deslumbrados","desmedro","desnacionalizadas","desnacionalizadoras","desnuda","desobedecer","desoyendo","despersonalizaba","despertar","despiadada","desposeidas","desprecia","desprovisto","destacada","destacó","desvanecer","desvía","detenian","determinada","determinarán","dicen","dificiles","dignamente","dignifica","dignificación","dignificadora","dilaciones","dilectos","dinámica","dinero","diplómáficos","directivas","directrices","dirigir","discrepancias","discusiones","disfrutado","disipadas","disociación","disolución","dispersar","dispuestas","distancias","distintas","divergencias","diversas","divisa","divulgan","doble","doblegarnos","doblez","doctrinarias","doctrinas","dominación","dominio","don","dotarla","dotes","du","duda","dudo","ea","economica","económicamantener","económicos","ecuanimidad","edificar","edificarse","egoismo","ejerce","ejercer","ejercerán","ejercito","elaborados","elariunfo","electoralmente","electores","elegido","elementales","elemento","elevación","elevada","elevado","elige","elocuente","eludido","emanación","emancipacion","embajadas","embarga","emoción","emocionado","emociones","empena","empeñada","empeñé","empero","emplazados","empresa","empresas","empuje","én","enardecidos","encaminé","encarada","encarezco","encarnaciones","encontrado","encontrar","encontraremos","encrucijadas","encubiertas","encuentran","encuentro","encumbrada","endental","enemigos","enérgica","enfoque","enfrentan","enfrentarse","engafiosas","engaño","ennoblecer","enriquecida","enseñanza","entendiendo","entereza","entero","entiendo","entorpece","entramos","entrana","entrever","entronización","envuelto","envuelve","equilibradamente","equilibrio","equivale","erguirse","erial","erigirse","eriollo","error","ery","escalonadamente","escudriñar","escurrirse","esencia","esenciales","esencialmente","esencias","esforzarnos","esfuerzo","esfuerzos","eslabón","eslimacion","eslirpe","españa","especulación","esperar","espero","espina","espirrtuales","espititu","esplendoroso","espolean","espontáneas","espontaneo","estabilidad","estable","estarian","estática","éste","estilo","estimable","estimo","estimular","estímulos","estofno","estragos","estrechamente","estrechar","estrecho","estricta","estrictamente","éstrictamente","estrofas","estrucluras","estrue","estrujada","estudiar","estudios","evolucionar","exalta","examinar","excelencias","exigen","exigencias","exigir","existentes","existido","existir","éxito","experiencia","expoliadas","exponente","exponer","exposicién","exposición","expresar","expresión","expresiones","extensión","extralimitaciones","extranos","extrañas","extraordinariamente","extraordinarias","exvuesto","fábricas","factor","factoy","fallo","falso","falta","fantasía","farsa","favorecer","fealizaciones","fecunda","feonsentiró","fer","ferviente","fervientemente","fervor","fervoroso","fidelidad","fieles","fiesta","filosofía","finalidad","fino","firma","firmemente","firmes","fiscalizadora","fla","flanco","flanqueados","flaquezas","fluye","fluyen","fomentar","fomento","fondo","formado","fórmula","formular","fortaleza","fortuna","forzosamente","fracaso","fragmentarios","fragor","francisco","franquear","fraterna","fresca","fria","fronteras","fructifero","frustran","fuente","fueros","función","funcionarios","fundamento","fusión","futuro","futuros","galerías","ganaderia","gaucho","generaciones","genio","gentes","gentil","gestión","gloria","gobernar","gpádserís","gpttarea","gracias","grado","gratitud","grato","gravar","gravitar","griego","grupos","guardador","guarde","guarla","gue","guerra","guía","guían","habian","habitar","habituales","hablado","hablar","hablo","hacefse","hacerlas","hacerlo","hacerme","hacerse","haciéndola","haciéndoles","haciéndome","hañf","hecha","heridas","hermanados","hermandad","hermanos","héroes","hidalga","hidráulicos","hiedra","hiere","hijo","himno","histórico","hogares","hombria","honra","honroso","humahitaria","humana","humanista","humildad","humildes","humilla","hy","ia","ideal","ideales","ideay","ideologías","ideologicas","ido","ilegitimas","ilustres","imaginación","imparcialidad","impedir","imperativo","imperio","impetu","impiden","implacablemente","implantar","implica","imponen","imponerse","importación","imposición","imprescriptible","improvisaciones","improvlsaciones","impuestas","inaugurar","incomprensión","incorporada","incremento","inculto","incumben","incurra","incurrir","independencia","indiferente","individuales","individualida","individuos","industrializacién","ineludibles","inercia","inexplotados","inferido","inferir","inflado","inflexible","influir","informa","ingenio","ingenuas","inicia","iniciado","iniciativa","inmediatas","inminencia","innovar","inquebrantable","insigne","insignificantes","insólita","inspirado","inspiren","instante","institucionales","insuficiente","integrafnente","integramente","integren","integridad","intelectuales","inteligencia","intensidad","intentaro","intercambio","interior","interpretaciones","interprete","intérprete","intervención","intimo","íntimo","intransigente","intromisiones","intuyeron","inútiles","inverosimiles","inversamente","investiduras","invulnerable","irá","irradiar","irrenunciable","irreversible","isma","jacondiciones","je","jerarquia","judicial","jugarse","juramento","jurídicas","juridico","jurídico","justa","justas","justificarse","juventud","juzguerv","lá","lado","lamfusticia","larga","latifundios","latino","latinoamericana","lay","lazos","lcs","lealmente","legado","legal","legalidad","legislacióri","legítimos","lenidad","lesionado","levantada","levantar","lg","lgs","liberación","ligereza","limando","limitarse","límite","limito","limpia","llame","llamo","llano","llanuras","llave","llegado","llegar","llegará","llegóse","llegue","lleguen","llevamos","llevar","llevaremos","lluvia","lomas","lora","losecursos","luces","luchar","lucrade","luego","lugar","maduras","magistrado","magna","magnitud","mágy","mala","malas","mallas","malograrse","mancillados","mandato","manera","manifestaciones","manifestarse","manifiesto","mantenerse","manteney","mantenimiento","mantienen","marchan","marchar","mares","material","máxima","maximo","mayorías","mayoritarios","mdesiéresat","medio","medios","mefdare","méjico","mencionadas","mengua","menos","menoscabo","mensaje","mente","menudo","merced","merece","merecemos","merecimientos","mereció","merezcan","mérito","mero","més","meta","mevar","mf","mgalére00","mide","miguia","milenaria","milenios","militar","minifundios","minoria","mira","miseria","misérxj","místico","móderador","modestas","modesto","modestos","moho","mor","moral","moralización","moralmente","movimiento","mtterializar","muchedumbreg","muchedumbres","mueve","múltiples","multisecular","mundial","mundiales","muyy","my","nace","nacilonal","nacionalidad","nador","narlos","natural","naturaleza","nave","necesidad","necesidades","necesita","necesitados","necesitare","negara","negocios","ningun","nítidamente","ño","objetividad","objeto","obligaciones","obligado","obreras","obrero","obscuros","observen","obstáculo","obstante","obstinada","obtener","obtenido","ocasionar","ociosa","octubre","ocupa","ocupar","ocupé","ofrecer","ofreciendo","oigan","oir","olvidado","olvidar","on","opinión","oponer","oposicion","optar","optimismo","opuestas","ordena","orgánicamente","orgullo","orientándola","oriente","ostenten","otorgar","pabeaa5p8f","pabellón","pacificación","pactos","padres","países","pampas","par","paras","parece","pareja","paréntesis","parlamentaria","parte","participo","particular","partidistas","parypreeminencias","pasado","pasar","pasará","patriá","patrio","patrios","pausadamente","peculiares","pedir","pédir","peligro","peligroso","pensamiento","pensamuento","peña","peofes","peón","pequeño","perar","percibimos","percibir","perdía","perfección","perfeccionamiento","perfeccionar","perfectamente","perfiles","periodo","período","perjudica","perjudicial","perjuicio","perjuicios","permitan","permite","personalidad","pesadamente","pesimismo","pie","piedad","pierda","placey","plan","planteados","plasmación","plena","población","poblaron","pobres","pocos","podéf","podra","podremos","podria","politico","político","ponderado","ponegfel","ponenos","pongo","populares","porno","posiblemente","posibles","potente","potestad","práctica","practicas","pre","preferible","preguntaba","prelengedes","prenda","preocupación","preocupaciones","preparación","presencia","presentarse","presente","presentes","presentido","presidencia","presidenciales","presidencialista","presión","prestación","prestando","prestándome","pretenda","pretendido","pretérita","pretexto","prevalecer","previsiones","previsora","primer","primordial","privada","privadas","privado","privilegios","problema","procedentes","procedimientos","próceres","proceso","proclama","proclamar","procurado","procurar","prodigado","prodigarlas","pródigo","produce","productivo","productos","profesan","profunda","profundamente","profundas","profundidad","programa","progresiva","progresos","prolongados","promesa","prominente","promover","pronunciadas","pronunciamiento","pronunciará","propias","propiciadas","propietarios","propor","proporciona","proposito","propósito","propulsado","propulsaré","proseguida","prosperar","prosperidad","protección","proyectistas","pudieron","puerta","puertas","puesta","puesto","puja","pundonor","pureza","qque","qu","quebradas","queda","quedaba","quedan","quedar","quedara","quedaron","queflas","queha","quela","queremos","quiebre","quienesíme","quiéran","quiere","quisiera","racional","racionalmente","raices","rancho","rasgos","razones","reales","reali","réalizaciones","rebasan","rebasó","recelos","receptáculo","reciamay","reciedumbre","recinto","recíproco","reconforta","reconocimiento","reconozcan","rectificando","rectificatoria","recu","recuperación","recuperado","recuperar","recurrir","recurrirse","reductos","referir","reflejada","reflexién","refórma","refrenar","reftejada","refuerce","regateaban","regimenes","región","reguieren","regulación","rehuye","reiteradamente","reiterarnos","reivindicaciones","relaciones","relativos","rencor","reparados","reparar","repetir","repito","representaciones","representadas","representados","república","republicanos","repudian","requiere","requisito","resarcirse","reserva","resistencia","resolver","resortes","respetables","respetar","respete","respetuoso","restablecido","resultarían","resumir","retomamos","retorno","reúne","reviste","revolucionarios","rico","riesgo","riscos","ritmo","robustecer","romería","ropaje","roque","ruda","rutinarias","sabía","sabido","sabor","sacrificar","sáenz","sagrario","salario","san","satisfecha","satisfechos","savia","sazón","sdversarios","seguir","seguirá","segundas","segundo","seguros","selva","semejantes","semiderruida","semielaborados","semipenumbra","senatoriales","senor","sensible","sentar","sentidyxagerado","sentirme","sera","sérá","serárylos","sere","serena","seres","seria","serle","serlo","sernos","sertido","sesión","siembren","siento","sigan","significado","simo","simplísima","simultánea","sinceridad","sincero","singular","sirena","sistema","sl","soberana","socialy","soducir","sol","solucio","solución","soluntad","sombras","sombrios","someterse","sometidas","sometido","sortilegio","sostener","sostenido","sr","substraer","suburbio","subversiones","sucediendo","suficientemente","sufre","sufrido","sujniciativa","sumar","sumido","supeditado","supera","superfluas","superiores","tablado","talante","tamizado","tapera","tarea","técnico","temor","templado","temporalmente","tendientes","teórica","tergiversado","tesón","tibieza","timo","tipo","tiradores","tn","to","todavía","tomar","tortuoso","tos","total","trabajador","trabajadoras","trabajadorasi","trabajar","traicionar","trajeron","transformandola","transgresiones","transitoria","transmitiendo","transporte","trascienda","tratado","tratar","tribunales","triunfante","tura","última","último","uná","unan","uncion","unen","unicamente","único","unidad","universidades","urgencia","usual","utiles","utílización","utilizar","vacilo","valezca","valiosa","valores","vayan","vea","velará","vencedores","venido","verdadera","verdaderos","vergeles","verla","verlas","verse","viay","vicepresidencia","vidas","viendo","vientos","vieron","vinculados","virilidad","virtudes","viste","visto","vital","vivía","vivían","vivificante","vivimos","vo","vocación","voluntades","voz","vuelto","vuelven","vulnerable","wi","wma","yolver","yperseguir","zadores","zarzas","zolpe"],"freq":[28,13,12,12,12,11,10,9,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":6.42857142857143,"backgroundColor":"black","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+
+---
+background-image: url(https://github.com/electorArg/polAr/blob/master/hex/hex-polAr.png?raw=true)
+background-position: 95% 5%
+background-size: 10%
+
+### Minando texto de `{polAr}`
+#### Explorar discursos disponibles con `show_available_speech()`
+
+
+```r
+library(polAr)
+
+show_available_speech()
+## # A tibble: 116 x 2
+##    year  president            
+##    &lt;chr&gt; &lt;chr&gt;                
+##  1 1854  justo_jose_de_urquiza
+##  2 1855  justo_jose_de_urquiza
+##  3 1856  justo_jose_de_urquiza
+##  4 1857  justo_jose_de_urquiza
+##  5 1858  justo_jose_de_urquiza
+##  6 1859  justo_jose_de_urquiza
+##  7 1860  santiago_derqui      
+##  8 1861  santiago_derqui      
+##  9 1862  bartolome_mitre      
+## 10 1863  bartolome_mitre      
+## # ... with 106 more rows
+```
+
+
+---
+background-image: url(https://github.com/electorArg/polAr/blob/master/hex/hex-polAr.png?raw=true)
+background-position: 95% 5%
+background-size: 10%
+
+
+
+### Minando texto de `{polAr}`
+
+#### Descargar con `get_speech()`
+
+
+```r
+get_speech(year = 1991)
+## # A tibble: 2,602 x 3
+##    word      presidente    year
+##    &lt;chr&gt;     &lt;chr&gt;        &lt;dbl&gt;
+##  1 congreso  carlos_menem  1991
+##  2 llego     carlos_menem  1991
+##  3 magno     carlos_menem  1991
+##  4 recinto   carlos_menem  1991
+##  5 intención carlos_menem  1991
+##  6 formular  carlos_menem  1991
+##  7 alegato   carlos_menem  1991
+##  8 favor     carlos_menem  1991
+##  9 gobierno  carlos_menem  1991
+## 10 llego     carlos_menem  1991
+## # ... with 2,592 more rows
+```
+
+---
+background-image: url(https://github.com/electorArg/polAr/blob/master/hex/hex-polAr.png?raw=true)
+background-position: 95% 5%
+background-size: 10%
+
+
+### Minando texto de `{polAr}`
+
+#### Descargar sin procesamieto _tidy_
+
+
+```r
+CSM &lt;- get_speech(year = 1991, 
+*          raw = TRUE)
+
+CSM
+## # A tibble: 1 x 3
+##   discurso                                                      anio presidente 
+##   &lt;chr&gt;                                                        &lt;dbl&gt; &lt;chr&gt;      
+## 1 "Honorable Congreso: Llego a este magno recinto, no con la ~  1991 carlos men~
+```
+
+
+---
+
+background-image: url(https://github.com/LatinR/identidad-visual-latinR/raw/master/LatinR_hex_violeta.png)
+background-position: 95% 5%
+background-size: 30%
+
+class: middle
+
+#LatinR2020
+
+&gt; **LatinR**: *MinaR los discuRsos pResidenciales* (con Camila Higa y Lucas Enrich) 
+
+[Abstract](https://github.com/TuQmano/latinr2020/blob/master/rmd/discursos/discursos_presidenciales.pdf) | [📊 Slides](https://github.com/TuQmano/latinr2020/blob/master/slides/discursos/minar_los_discursos.pdf) | [⌨️ blogpost](https://www.tuqmano.com/2020/03/11/los-discursos-de-les-presidentes/) | [📼 Video](https://www.youtube.com/watch?v=IZfNr_N7ylw&amp;list=PL9-E3cL2KgKlNKVfiwHoGR3pHpg7x8Uzt&amp;index=2).
+
+---
+background-image: url(https://juliasilge.github.io/tidytext/reference/figures/tidytext.png)
+background-position: 95% 5%
+background-size: 10%
+
+# (Algunos) Tipos de Análisis
+
+&lt;img src="https://www.tidytextmining.com/images/tmwr_0601.png" width="70%" /&gt;
+
+
+--
+##### _Bag of words_
+
+--
+##### Análisis de Sentimiento
+
+--
+##### Modelado de Tópicos
+
+---
+class: center, middle
+
+# _live coding_
+### `script/practica_tm.R`
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Herramientas Cuantitativas para el Análisis Político</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Juan Pablo Ruiz Nicolini" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"900","height":"400","margin":"1em"}</script>
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Herramientas Cuantitativas para el Análisis Político
+## [CP44] Maestría en Ciencia Política
+### Juan Pablo Ruiz Nicolini
+### Universidad Torcuato Di Tella
+### 6/10/2020
+
+---
+
+
+exclude: true
+
+
+
+
+
+
+
+
+
+---
+
+class: middle, center
+
+
+## SESIÓN 4
+### Domar los datos (II)
+
+#### [<i class="fas  fa-globe "></i>/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+
+#### [<i class="fab  fa-github "></i>/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+
+
+---
+
+
+# Hoja de ruta
+
+1. Repaso
+
+--
+
+2. Ejercicio clase 3 + demo `git`
+
+--
+
+3. Domar los datos II
+
+--
+
+* Más `dplyr` (verbos auxiliares; datos relacionales)
+  
+--
+  
+* día y hora `{lubridate}`
+  
+--
+  
+* caracteres `{stringr}`
+  
+--
+  
+* variables ordinales `{factors}`
+
+
+---
+
+##  Ciencia de Datos - Domar Datos
+
+&lt;img src="https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science-wrangle.svg" width="100%" /&gt;
+
+--
+
+* **Importar <i class="fas  fa-check "></i>**
+
+--
+
+* **Ordenar <i class="fas  fa-check "></i>**
+--
+
+* **Transformar <i class="fas  fa-arrow-circle-right "></i>**
+
+---
+
+## <i class="fas  fa-book "></i> Referencias
+
+### PROCESAR
+
+4. _Transformación de Datos_, en [Wickham y Grolemnud](https://es.r4ds.hadley.nz/transform.html)
+
+5.  _Transformando nuestros Datos_ en  [Montané](https://bookdown.org/martinmontaneb/CienciaDeDatosParaCuriosos/transformando-nuestros-datos-data-wrangling.html)
+
+6. _Manejo de datos_ en [Urdinez y Cruz](https://arcruz0.github.io/libroadp/data.html)
+
+7. _Poniendo los datos en forma_ en [Vazquez Brust](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/poniendo-los-datos-en-forma.html)
+
+---
+class: inverse, center, middle
+
+# REPASO
+
+---
+
+background-image: url(https://github.com/TuQmano/hex-stickers/raw/master/PNG/tidyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos I
+
+## Datos Ordenados
+
+
+&lt;img src="https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/tidy-1.svg" width="80%" /&gt;
+
+--
+
+1. Cada variable debe tener su propia columna.
+
+--
+
+2. Cada observación debe tener su propia fila.
+
+--
+
+3. Cada valor debe tener su propia celda.
+
+
+---
+
+background-image: url(https://github.com/TuQmano/hex-stickers/raw/master/PNG/tidyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos I
+
+## Datos Ordenados: _pivotear_
+
+Entre los distintos verbos, se destacan: 
+
+* `pivot_longer()`: reduce cantidad de columnas y aumenta las filas
+
+* `pivot_wider()`: reduce cantidad de filas y aumenta columnas
+
+* Más verbos: 
+
+`complete / fill / replace_na / drop_na`,
+
+`nest / unnest`, 
+
+`unite /separate / extract`
+
+[<i class="fas  fa-link "></i>`{tidyr}`](https://tidyr.tidyverse.org/)
+
+---
+
+background-image: url(https://github.com/TuQmano/hex-stickers/raw/master/PNG/dplyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos I
+
+## Transformar
+
+### Una caja de herramientas
+
+#### Verbos principales de `{dplyr}` para manipular la _data_
+
+* `filter()`: reduce la cantidad de filas  (observaciones)
+
+* `select()`: reduce la cantidad de columnas (variables)
+
+* `mutate()`: crea o modifica variables 
+
+* `arrange()`: ordena (sort)
+
+* `group_by()`: agrupa observaciones
+
+* `summarize()`: reduce múltiples observaciones a un valor
+
+---
+class:  center, middle
+
+### Ejemplo:
+
+# <i class="fab  fa-git-square "></i>
+
+# +
+
+# <i class="fab  fa-github "></i>
+
+
+---
+
+# `git`
+
+&lt;img src="https://yabellini.netlify.app/img/git_concept_map.png" width="80%" /&gt;
+
+
+<i class="fas  fa-link "></i> &lt;https://yabellini.netlify.app/es/post/githubconr/&gt;
+
+
+
+---
+class: inverse, center, middle
+
+### Revisión
+
+# TP N°1
+
+
+
+---
+
+background-image: url(https://www.tidyverse.org/blog/2020/06/dplyr-1-0-0/dplyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos I
+
+## + verbos de `{dplyr}`
+
+--
+
+* `n()`
+
+--
+
+* `slice()` (y variantes:  `slice_*()`)
+
+--
+
+* `rename()`
+
+--
+
+* `case_when()` (re versión de `ifelse()`)
+
+--
+
+* Variantes de `mutate_*()` y `summarise_*()`
+
+--
+
+* `across()` en el [*nuevo* `{dplyr}` <i class="fas  fa-link "></i>](https://www.tidyverse.org/blog/2020/06/dplyr-1-0-0/) 
+
+--
+
+* grupos por filas con `rowwise()`
+
+
+---
+
+background-image: url(https://www.tidyverse.org/blog/2020/06/dplyr-1-0-0/dplyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+## Datos relacionales 
+
+
+&lt;img src="https://www.garrickadenbuie.com/project/tidyexplain/images/left-join-extra.gif" width="300" /&gt;
+
+
+[<i class="fas  fa-link "></i> Tidy Explain, Garrick Aden‑Buie](https://www.garrickadenbuie.com/project/tidyexplain/)
+
+
+---
+
+background-image: url(https://www.tidyverse.org/blog/2020/06/dplyr-1-0-0/dplyr.png)
+background-position: 95% 5%
+background-size: 10%
+
+
+## Datos relacionales 
+
+* Uniones de transformación (del inglés _mutating joins_), que agregan nuevas variables a un data frame a partir de las observaciones coincidentes en otra tabla (*vg* `left_join()`)
+
+* Uniones de filtro (del inglés _filtering joins_), que filtran observaciones en un _data frame_ con base en si coinciden o no con una observación de otra tabla (*vg* `anti_join()`).
+
+* Operaciones de conjuntos (del inglés _set operations_), que tratan las observaciones como elementos de un conjunto (*vg* `set_diff()`).
+
+
+<i class="fas  fa-link "></i> [Datos Relacionales - R4DS](https://es.r4ds.hadley.nz/datos-relacionales.html)
+
+
+---
+class: inverse, middle, center
+
+# Domar los Datos
+### (II Parte) 
+
+---
+
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/stringr.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos II
+
+## Caracteres 
+
+--
+
+* Funciones que permiten manipular caracteres individuales dentro de las cadenas en vectores de caracteres (_vg_ : **`str_sub(string = x, start = 1, end = 4)`**).
+
+--
+
+* Herramientas para agregar, eliminar y manipular espacios en blanco (_vg_ : **`str_pad(string = x , width = 2 , side = "left" , pad = 0)`**).
+
+--
+
+* Funciones que detectan coincidencia de patrones como  las _expresiones regulares_ -[_regex_ <i class="fas  fa-link "></i>](https://stringr.tidyverse.org/articles/regular-expressions.html): 
+**`str_detect(string = x, pattern = ":digits:")`**
+
+
+--
+
+[<i class="fas  fa-link "></i>`{stringr}`](https://stringr.tidyverse.org/articles/stringr.html)
+
+---
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/lubridate.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos II
+
+## Días y horas
+
+`{lubridate}` incluye una gran variedad de funciones para **(a) *paresear* días y horas**; **(b) crear y extraer información**; (c) manejar zonas horarias (_tz_); y hasta calcular intervalos de tiempo y _aritmética de tiempo_
+
+--
+
+
+
+
+```r
+library(lubridate) # (a)
+
+dmy("6 de octubre de 2020")
+## [1] "2020-10-06"
+```
+
+--
+
+
+
+
+```r
+library(lubridate) # (b)
+
+today() + 365
+## [1] "2021-10-05"
+```
+
+--
+
+[<i class="fas  fa-link "></i>`{lubridate}`](https://lubridate.tidyverse.org/index.html)
+
+
+---
+
+background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/forcats.png)
+background-position: 95% 5%
+background-size: 10%
+
+# Domar los datos II
+
+## Variables categóricas
+
+
+&gt; *Los factores son útiles cuando se tiene datos categóricos, variables que tienen un conjunto de valores fijo y conocido, y cuando se desea mostrar los vectores de caracteres en orden no alfabético* **R4DS - &lt;https://es.r4ds.hadley.nz/factores.html&gt;**
+
+--
+
+* `fct_reorder()` &gt; modifica el orden
+
+--
+
+* `fct_recode()` &gt; modifica valores (no niveles)
+
+--
+
+* `fct_collapse()`&gt; colapsar es útil para re codificar muchos niveles 
+--
+
+* `fct_lump()` &gt; agrupa 
+
+---
+
+class:  middle, center
+
+
+background-image: url(https://raw.githubusercontent.com/electorArg/polAr/master/hex/hex-polAr.png)
+background-position: 90% 10%
+background-size: 15%
+
+
+#Domar los Datos (II)
+
+### **-&gt; _live coding_ con `{polAr}`**
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+(function(time) {
+  var d2 = function(number) {
+    return ('0' + number).slice(-2); // left-pad 0 to minutes/seconds
+  },
+
+  time_format = function(total) {
+    var secs = Math.abs(total) / 1000;
+    var h = Math.floor(secs / 3600);
+    var m = Math.floor(secs % 3600 / 60);
+    var s = Math.round(secs % 60);
+    var res = d2(m) + ':' + d2(s);
+    if (h > 0) res = h + ':' + res;
+    return res;  // [hh:]mm:ss
+  },
+
+  slide_number_div = function(i) {
+    return document.getElementsByClassName('remark-slide-number').item(i);
+  },
+
+  current_page_number = function(i) {
+    return slide_number_div(i).firstChild.textContent;  // text "i / N"
+  };
+
+  var timer = document.createElement('span'); timer.id = 'slide-time-left';
+  var time_left = time, k = slideshow.getCurrentSlideIndex(),
+      last_page_number = current_page_number(k);
+
+  setInterval(function() {
+    time_left = time_left - 1000;
+    timer.innerHTML = ' ' + time_format(time_left);
+    if (time_left < 0) timer.style.color = 'red';
+  }, 1000);
+
+  slide_number_div(k).appendChild(timer);
+
+  slideshow.on('showSlide', function(slide) {
+    var i = slide.getSlideIndex(), n = current_page_number(i);
+    // reset timer when a new slide is shown and the page number is changed
+    if (last_page_number !== n) {
+      time_left = time; last_page_number = n;
+      timer.innerHTML = ' ' + time_format(time); timer.style.color = null;
+    }
+    slide_number_div(i).appendChild(timer);
+  });
+})(60000);
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

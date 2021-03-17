@@ -1,144 +1,33 @@
 
-## Herramientas Cuantitativas para el Análisis Político
-
-#### \[CP44\] Maestría en Ciencia Política | UNIVERSIDAD TORCUATO DI TELLA | Sep - Nov 2020
-
-[![DOI](https://zenodo.org/badge/286517983.svg)](https://zenodo.org/badge/latestdoi/286517983)
+#### \[CP44\] Maestría en Ciencia Política \| UNIVERSIDAD TORCUATO DI TELLA \|
 
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
------
+------------------------------------------------------------------------
 
-### MATERIAL
+## -&gt; [2021]()
 
-##### \-\> [BIBLIOGRAFÍA](https://tuqmano.github.io/MetodosCiPol/bibliografia.html)
+***14 de septirembre a 23 de noviembre***
 
-##### \-\> [PROGRAMA](https://tuqmano.github.io/MetodosCiPol/programa.html)
+------------------------------------------------------------------------
 
-##### \-\> [DATOS](https://tuqmano.github.io/MetodosCiPol/datos.html)
+### EDICIONES ANTERIORES
 
------
+#### -&gt; [Sep - Nov 2020](https://tuqmano.github.io/MetodosCiPol/2020) [![DOI](https://zenodo.org/badge/286517983.svg)](https://zenodo.org/badge/latestdoi/286517983)
 
-### CLASE 1
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase01/Clase1.html)
-
-  - [INSTALACIÓN Y
-    RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase01/install_soft.html)
-
-### CLASE 2
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase02/Clase2.html)
-
-#### Machetes
-
-  - [RStudio - Entorno de Desarrollo Integrado
-    (IDE)](https://github.com/rstudio/cheatsheets/blob/master/translations/spanish/rstudio-ide_Spanish_Translation_Monica_Alonso.pdf)
-
-  - [R Markdown para la
-    comunicación](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)  
-
-  - [Comparación de sintaxis: formas de escribir código en
-    `R`](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/syntax_spanish.pdf)
-
-### CLASE 3
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase03/Clase3.html)
-
-#### Machetes
-
-  - [Importar y Limpiar
-    Datos](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/data-import-Spanish_translation-2019.pdf)
-    con `{readr}` y `{tidyr}`
-
-  - [Transformar
-    Datos](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/data-transformation_Spanish.pdf)
-    con `{dplyr}`
-
-### CLASE 4
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase04/Clase4.html)
-
-#### Machetes
-
-  - [Datos Categóricos
-    (*Factores*)](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/factors-Spanish.pdf)
-    con `{factors}`
-
-  - [Datos de Tiempo (*Fechas y
-    Horas*)](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/lubridate-Spanish-translation-2019.pdf)
-    con `{lubridate}`
-
-  - [Datos de Texto
-    (*Character*)](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/strings_Spanish.pdf)
-    con `{stringr}`
-
-### CLASE 5
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase05/Clase5.html)
-
-#### Machetes
-
-  - [Iteraciones - programación
-    funcional](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/purrr_COrtega_Spanish.pdf)
-    con `{purrr}`
-
-### CLASE 6
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase06/Clase6.html)
-
-#### Machetes
-
-  - [Dava
-    Viz](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/ggplot2.pdf)
-    con `{ggplot2}`
-
-### CLASE 7
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase07/Clase7.html)
-
-### CLASE 8
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase08/Clase8.html)
-
-#### Machetes
-
-  - [Datos Espaciales
-    Simplificados](https://github.com/rstudio/cheatsheets/raw/master/sf.pdf)
-    con `{sf}`
-
-### CLASE 9
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase09/Clase9.html)
-
-### CLASE 10
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
-
-### CLASE 11
-
-  - [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase11/Clase11.html)
-
-#### Machetes
-
-  - [Análisis
-    Reproducible](https://github.com/rstudio/cheatsheets/raw/master/translations/spanish/rmarkdown-2.0_Spanish.pdf)
-    con `R Markdown` (documentos, reportes, presentaciones, dabshboards,
-    sitios web)
-
------
+------------------------------------------------------------------------
 
 ### \#MétodosCiPol
 
-#### [<!--html_preserve--><i class="fas  fa-globe "></i><!--/html_preserve-->/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+#### [<i class="fas  fa-globe "></i>/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
 
-#### [<!--html_preserve--><i class="fab  fa-github "></i><!--/html_preserve-->/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+#### [<i class="fab  fa-github "></i>/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
 
 ### TuQmano
 
-##### [<!--html_preserve--><i class="fas  fa-globe "></i><!--/html_preserve-->](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/)
+##### [<i class="fas  fa-globe "></i>](https://www.tuqmano.com/) [tuqmano.com](https://www.tuqmano.com/)
 
-##### [<!--html_preserve--><i class="fab  fa-twitter "></i><!--/html_preserve-->](https://twitter.com/TuQmano) [tw: TuQmano](https://twitter.com/TuQmano)
+##### [<i class="fab  fa-twitter "></i>](https://twitter.com/TuQmano) [TuQmano](https://twitter.com/TuQmano)
 
-##### [<!--html_preserve--><i class="fab  fa-github "></i><!--/html_preserve-->](https://github.com/tuqmano) [github: TuQmano](https://github.com/tuqmano)
+##### [<i class="fab  fa-github "></i>](https://github.com/tuqmano) [TuQmano](https://github.com/tuqmano)

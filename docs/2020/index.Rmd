@@ -22,24 +22,24 @@ output:
 
 ### MATERIAL
 
-##### -> [BIBLIOGRAFÍA](https://tuqmano.github.io/MetodosCiPol/bibliografia.html)
+##### -> [BIBLIOGRAFÍA](https://tuqmano.github.io/MetodosCiPol/2020/bibliografia.html)
 
-##### -> [PROGRAMA](https://tuqmano.github.io/MetodosCiPol/programa.html)
+##### -> [PROGRAMA](https://tuqmano.github.io/MetodosCiPol/2020/programa.html)
 
-##### -> [DATOS](https://tuqmano.github.io/MetodosCiPol/datos.html)
+##### -> [DATOS](https://tuqmano.github.io/MetodosCiPol/2020/datos.html)
 
 ---
 
 ### CLASE 1 
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase01/Clase1.html) 
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase01/Clase1.html) 
 
-* [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/Clase01/install_soft.html) 
+* [INSTALACIÓN Y RECURSOS](https://tuqmano.github.io/MetodosCiPol/2020/Clase01/install_soft.html) 
 
 
 ### CLASE 2
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase02/Clase2.html) 
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase02/Clase2.html) 
 
 #### Machetes 
 
@@ -50,7 +50,7 @@ output:
 
 ### CLASE 3
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase03/Clase3.html) 
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase03/Clase3.html) 
 
 #### Machetes 
 
@@ -61,7 +61,7 @@ output:
 
 ### CLASE 4
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase04/Clase4.html) 
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase04/Clase4.html) 
 
 #### Machetes 
 
@@ -74,7 +74,7 @@ output:
 
 ### CLASE 5
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase05/Clase5.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase05/Clase5.html)
 
 #### Machetes 
 
@@ -83,7 +83,7 @@ output:
 
 ### CLASE 6
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase06/Clase6.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase06/Clase6.html)
 
 #### Machetes 
 
@@ -91,12 +91,12 @@ output:
 
 ### CLASE 7
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase07/Clase7.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase07/Clase7.html)
 
 
 ### CLASE 8
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase08/Clase8.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase08/Clase8.html)
 
 #### Machetes 
 
@@ -106,17 +106,17 @@ output:
 
 ### CLASE 9
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase09/Clase9.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase09/Clase9.html)
 
 
 
 ### CLASE 10
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase10/Clase10.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase10/Clase10.html)
 
 ### CLASE 11
 
-* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/Clase11/Clase11.html)
+* [PRESENTACIÓN](https://tuqmano.github.io/MetodosCiPol/2020/Clase11/Clase11.html)
 
 #### Machetes 
 
@@ -129,7 +129,7 @@ output:
 
 ###  #MétodosCiPol
 
-#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol)
 
 #### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
 

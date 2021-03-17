@@ -54,9 +54,9 @@ RMarkdown: [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdo
 
 #  #MétodosCiPol
 
-#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/)
+#### [`r icon::fa("globe")`/MetodosCiPol/](https://tuqmano.github.io/MetodosCiPol/2020)
 
-#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol)
+#### [`r icon::fa("github")`/MetodosCiPol/](https://github.com/TuQmano/MetodosCiPol/2020)
 
 
 
